@@ -53,6 +53,10 @@ on init
      # Initial cpuctl
     chmod 0666 /dev/cpuctl/background/cpu.shares
     chmod 0666 /dev/cpuctl/top-app/cpu.shares
+ 
+    # ZRAM setup
+    write /sys/block/zram0/comp_algorithm lz4kd
+    write /proc/sys/vm/page-cluster 0
 
 on early-fs
     start vold
@@ -467,6 +471,10 @@ service vendor.sniffer.circular /vendor/bin/tcpdump -i wlan0 -W 3 -C 300 -w /dat
     group root wifi
     disabled
     oneshot
+
+on property:sys.boot_completed=1
+    swapon_all /vendor/etc/fstab.zram
+    write /proc/sys/vm/swappiness 100
 
 on property:sys.boot_completed=1
     enable vendor.qvirtmgr
