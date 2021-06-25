@@ -16,6 +16,9 @@ ro.product.mod_device=garnet_global
 # QTI
 ro.vendor.qti.va_aosp.support=1
 
+# Bluetooth
+persist.vendor.btstack.enable.twsplus=true
+
 # Radio
 DEVICE_PROVISIONED=1
 persist.vendor.data.mode=concurrent
