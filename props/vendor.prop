@@ -200,9 +200,6 @@ ro.vendor.perf-hal.ver=2.3
 ro.vendor.perf.scroll_opt=1
 vendor.perf.framepacing.enable=1
 
-# Qcomd
-persist.vendor.qcomsysd.enabled=1
-
 # Radio
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
