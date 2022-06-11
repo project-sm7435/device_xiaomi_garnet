@@ -1,1 +1,7 @@
 allow system_app hal_mlipay_hwservice:hwservice_manager find;
+
+# Zram
+allow system_app sysfs_zram:dir search;
+allow system_app sysfs_zram:file r_file_perms;
+r_dir_file(system_app, sysfs_zram)
+
