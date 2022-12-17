@@ -347,6 +347,7 @@ PRODUCT_PACKAGES += \
     SettingsProviderOverlayGarnetXIG05 \
     SystemUIOverlayGarnet \
     TelephonyOverlayGarnet \
+    OpenDeltaOverlayGarnet \
     WifiOverlayGarnet \
     WifiOverlayGarnetPoco \
     WifiOverlayGarnetRedmi \
