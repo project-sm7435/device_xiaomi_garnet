@@ -109,6 +109,8 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
+    libldacBT_abr \
+    libldacBT_enc \
     android.hardware.bluetooth.audio-impl
 
 PRODUCT_COPY_FILES += \
