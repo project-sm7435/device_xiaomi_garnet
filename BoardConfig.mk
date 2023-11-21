@@ -120,7 +120,8 @@ BOARD_KERNEL_CMDLINE := \
     disable_dma32=on \
     sysctl.kernel.firmware_config.force_sysfs_fallback=1 \
     bootinfo.fingerprint=$(LINEAGE_VERSION) \
-    swinfo.fingerprint=$(LINEAGE_VERSION)
+    swinfo.fingerprint=$(LINEAGE_VERSION) \
+    androidboot.init_fatal_reboot_target=recovery
 
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
