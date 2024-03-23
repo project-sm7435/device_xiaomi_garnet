@@ -170,6 +170,10 @@ PRODUCT_PACKAGES += \
     XiaomiEsimSwitcher \
     XiaomiEuicc
 
+# Debloat
+PRODUCT_PACKAGES += \
+    RemovePackagesGarnet
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
