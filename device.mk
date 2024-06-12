@@ -281,6 +281,7 @@ $(foreach sku, CN GL JP, \
 PRODUCT_PACKAGES += \
     ApertureOverlayGarnet \
     CarrierConfigOverlayGarnet \
+    DeviceAsWebcamResTarget \
     FrameworkOverlayGarnet \
     FrameworkOverlayGarnetGLEsim \
     FrameworkOverlayGarnetJPEsim \
