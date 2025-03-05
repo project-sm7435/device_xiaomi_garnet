@@ -151,6 +151,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.display.idle_time=0
 
+# Dolby
+$(call inherit-product, hardware/dolby/dolby.mk)
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
