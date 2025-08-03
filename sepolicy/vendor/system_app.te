@@ -17,3 +17,8 @@ allow system_app sysfs_thermal:file { rw_file_perms getattr };
 allow system_app vendor_sysfs_battery_supply:dir search;
 allow system_app vendor_sysfs_battery_supply:file { getattr open read write };
 
+
+# HBM
+allow system_app vendor_sysfs_graphics:dir search;
+allow system_app vendor_sysfs_graphics:file { getattr open read write };
+
