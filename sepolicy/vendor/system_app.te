@@ -23,3 +23,7 @@ allow system_app vendor_sysfs_corecontrol:file { getattr open read write };
 
 # Allow KProfiles to be adjusted by a system app
 allow system_app sysfs_kprofiles:file rw_file_perms;
+
+# HBM
+allow system_app vendor_sysfs_graphics:dir search;
+allow system_app vendor_sysfs_graphics:file { getattr open read write };
