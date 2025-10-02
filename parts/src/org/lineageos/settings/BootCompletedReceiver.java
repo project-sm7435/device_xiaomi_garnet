@@ -33,7 +33,6 @@ import android.view.Display;
 import android.view.Display.HdrCapabilities;
 
 import org.lineageos.settings.thermal.ThermalUtils;
-import org.lineageos.settings.refreshrate.RefreshUtils;
 import org.lineageos.settings.soundcontrol.SoundControlUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
@@ -55,7 +54,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
     private static void onLockedBootCompleted(Context context) {
             ThermalUtils.startService(context);
-            RefreshUtils.startService(context);
             overrideHdrTypes(context);
             SoundControlUtils.applyAll(context);
     }
