@@ -1,0 +1,2 @@
+# Allow vold to write storage device sysfs (read_ahead_kb)
+allow vold vendor_sysfs_sd:file write;
