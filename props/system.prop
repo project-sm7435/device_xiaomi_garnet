@@ -42,3 +42,6 @@ debug.hwui.target_cpu_time_percent=30
 debug.hwui.show_overdraw=false
 debug.renderengine.blur_algorithm=kawase2
 debug.hwui.use_triple_buffering=true
+
+#surface_flinger
+ro.surface_flinger.support_kernel_idle_timer=true
