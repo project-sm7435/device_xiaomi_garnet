@@ -62,6 +62,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed(
             'libgrpc++_unsecure.so',
             'libgrpc++_unsecure_prebuilt.so'
+    'system_ext/framework/mirilhook.jar': blob_fixup()
+        .apktool_patch('blob-patches/mirilhook.patch', '-r'),
         ),
     'vendor/bin/qguard': blob_fixup()
         .add_needed('libbase_shim.so'),
