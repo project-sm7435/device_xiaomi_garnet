@@ -364,13 +364,13 @@
         {
             "PowerHint": "EXPENSIVE_RENDERING",
             "Node": "ClassKgslKgsl3d0DevfreqMinFreq",
-            "Value": "600000000",
+            "Value": "650000000",
             "Duration": 0
         },
         {
             "PowerHint": "EXPENSIVE_RENDERING",
             "Node": "ClassKgslKgsl3d0DevfreqMaxFreq",
-            "Value": "875000000",
+            "Value": "940000000",
             "Duration": 0
         },
         {
