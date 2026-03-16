@@ -2,3 +2,6 @@ set_prop(vendor_init, vendor_fp_prop)
 set_prop(vendor_init, vendor_qcc_prop)
 
 allow init vendor_sysfs_sd:file write;
+
+# Bluetooth
+set_prop(vendor_init, vendor_bt_stack_prop)
