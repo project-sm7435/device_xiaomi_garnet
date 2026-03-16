@@ -3,8 +3,9 @@
      SPDX-FileCopyrightText: The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
-<resources>
-    <dimen name="keyguard_indication_margin_bottom">145dp</dimen>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Bottom margin size when fingerprint in display is active -->
+    <dimen name="keyguard_indication_margin_bottom">6.0dip</dimen>
 
     <!-- Blur radius behind Notification Shade -->
     <dimen name="max_shade_window_blur_radius">17dp</dimen>
