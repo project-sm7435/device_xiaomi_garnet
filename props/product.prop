@@ -12,3 +12,6 @@ bluetooth.profile.hid.host.enabled=true
 bluetooth.profile.map.server.enabled=true
 bluetooth.profile.opp.enabled=true
 bluetooth.profile.pbap.server.enabled=true
+
+# maintainer
+ro.lunaris.maintainer=ZetyaWyn
