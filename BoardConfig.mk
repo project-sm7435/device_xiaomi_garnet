@@ -221,6 +221,9 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/props/vendor.prop
 # Vendor security patch
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
+# SurfaceFlinger
+TARGET_USE_AOSP_SURFACEFLINGER := true
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
