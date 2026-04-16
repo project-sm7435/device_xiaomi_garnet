@@ -899,4 +899,7 @@
     
     <!-- Smart 5G -->
     <bool name="config_supportSmart5G">true</bool>
+    
+    <!--Useful if you want to improve signal reception -->
+    <bool name="config_ignoreRssnrSignalLevel">true</bool>
 </resources>
