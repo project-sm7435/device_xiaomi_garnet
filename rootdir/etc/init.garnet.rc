@@ -63,6 +63,24 @@ service qti_esepowermanager_service_1_1 /vendor/bin/hw/vendor.qti.esepowermanage
     group nfc system
     override
     disabled
+    
+service thermal-engine /vendor/bin/thermal-engine-v2
+	class main
+	user root
+	group root
+	socket thermal-send-client stream 0660 system oem_2907
+	socket thermal-recv-client stream 0660 system oem_2907
+	socket thermal-recv-passive-client stream 0660 system oem_2907
+	socket thermal-send-rule stream 0660 system oem_2907
+
+on property:sys.boot_completed=1
+	restart thermal-engine
+
+service vendor.charging /vendor/bin/charging
+    class main
+    user system
+    group system
+    capabilities DAC_OVERRIDE    
 
 on property:ro.boot.product.hardware.sku=CN
     enable vendor.nfc_hal_service
@@ -80,7 +98,7 @@ on property:ro.boot.product.hardware.sku=JP
     enable qti_esepowermanager_service_1_1
 
 on property:sys.boot_completed=1
-    write /sys/devices/virtual/thermal/thermal_message/sconfig 20
+    write /sys/devices/virtual/thermal/thermal_message/sconfig 0
 
     # Enable PowerHAL hint processing
     setprop vendor.powerhal.init 1
