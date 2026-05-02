@@ -80,7 +80,11 @@ service vendor.charging /vendor/bin/charging
     class main
     user system
     group system
-    capabilities DAC_OVERRIDE    
+    capabilities DAC_OVERRIDE
+    seclabel u:r:charging:s0
+
+on property:sys.boot_completed=1
+        restart vendor.charging    
 
 on property:ro.boot.product.hardware.sku=CN
     enable vendor.nfc_hal_service
