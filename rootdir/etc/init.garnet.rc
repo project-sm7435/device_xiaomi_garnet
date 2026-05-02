@@ -31,6 +31,12 @@ on boot
     chmod 0700 /sys/bus/platform/devices/soc:fingerprint_fpc/screen
     chmod 0666 /dev/input/event2
 
+    # Add permission to write charging
+    chown system system /sys/class/power_supply/battery/charge_control_limit
+    chmod 0664 /sys/class/power_supply/battery/charge_control_limit
+    chown system system /sys/class/power_supply/battery/constant_charge_current
+    chmod 0664 /sys/class/power_supply/battery/constant_charge_current
+
 on post-fs-data
     mkdir /data/vendor/misc 01771 system system
     mkdir /data/vendor/misc/mi_fp 0770 system system
@@ -63,28 +69,6 @@ service qti_esepowermanager_service_1_1 /vendor/bin/hw/vendor.qti.esepowermanage
     group nfc system
     override
     disabled
-    
-service thermal-engine /vendor/bin/thermal-engine-v2
-	class main
-	user root
-	group root
-	socket thermal-send-client stream 0660 system oem_2907
-	socket thermal-recv-client stream 0660 system oem_2907
-	socket thermal-recv-passive-client stream 0660 system oem_2907
-	socket thermal-send-rule stream 0660 system oem_2907
-
-on property:sys.boot_completed=1
-	restart thermal-engine
-
-service vendor.charging /vendor/bin/charging
-    class main
-    user system
-    group system
-    capabilities DAC_OVERRIDE
-    seclabel u:r:charging:s0
-
-on property:sys.boot_completed=1
-        restart vendor.charging    
 
 on property:ro.boot.product.hardware.sku=CN
     enable vendor.nfc_hal_service
