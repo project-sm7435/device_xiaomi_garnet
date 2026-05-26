@@ -15,6 +15,7 @@ cc_prebuilt_binary {
         "DevicePolicyPrebuilt",
         "GCS",
         "GoogleTTS",
+        "Jelly",
         "MyVerizonServices",
         "OBDM_Permissions",
         "OdadPrebuilt",
