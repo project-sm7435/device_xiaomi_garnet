@@ -112,11 +112,4 @@
     <string name="core_6">Core 6 (Besar)</string>
     <string name="core_7">Core 7 (Besar)</string>
 
-    <!-- Sound Control -->
-    <string name="sound_control_title">Kontrol Suara</string>
-    <string name="mic_gain">Microphone gain (dB)</string>
-    <string name="hp_left_gain">Gain headphone kiri</string>
-    <string name="hp_right_gain">Gain headphone kanan</string>
-    <string name="sound_control_enable">Aktifkan kontrol suara</string>
-
 </resources>

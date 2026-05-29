@@ -112,11 +112,4 @@
     <string name="core_6">Núcleo 6 (grande)</string>
     <string name="core_7">Núcleo 7 (grande)</string>
 
-    <!-- Sound Control -->
-    <string name="sound_control_title">Control de sonido</string>
-    <string name="mic_gain">Ganancia del micrófono (dB)</string>
-    <string name="hp_left_gain">Ganancia auriculares izquierdo</string>
-    <string name="hp_right_gain">Ganancia auriculares derecho</string>
-    <string name="sound_control_enable">Habilitar control de sonido</string>
-
 </resources>

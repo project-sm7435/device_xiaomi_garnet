@@ -86,10 +86,4 @@
     <string name="core_6">Ядро 6 (большое)</string>
     <string name="core_7">Ядро 7 (большое)</string>
 
-    <string name="sound_control_title">Управление звуком</string>
-    <string name="mic_gain">Усиление микрофона (дБ)</string>
-    <string name="hp_left_gain">Усиление левого наушника</string>
-    <string name="hp_right_gain">Усиление правого наушника</string>
-    <string name="sound_control_enable">Включить управление звуком</string>
-
 </resources>

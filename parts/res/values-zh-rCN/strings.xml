@@ -112,11 +112,4 @@
     <string name="core_6">核心 6 (大核)</string>
     <string name="core_7">核心 7 (大核)</string>
 
-    <!-- 声音控制 -->
-    <string name="sound_control_title">声音控制</string>
-    <string name="mic_gain">麦克风增益 (dB)</string>
-    <string name="hp_left_gain">左耳机增益</string>
-    <string name="hp_right_gain">右耳机增益</string>
-    <string name="sound_control_enable">启用声音控制</string>
-
 </resources>

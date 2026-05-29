@@ -97,10 +97,4 @@
     <string name="core_6">Çekirdek 6 (Büyük)</string>
     <string name="core_7">Çekirdek 7 (Büyük)</string>
 
-    <!-- Sound Control -->
-    <string name="sound_control_title">Ses Kontrolü</string>
-    <string name="mic_gain">Mikrofon kazancı (dB)</string>
-    <string name="hp_left_gain">Sol kulaklık kazancı</string>
-    <string name="hp_right_gain">Sağ kulaklık kazancı</string>
-    <string name="sound_control_enable">Ses kontrolünü etkinleştir</string>
 </resources>
