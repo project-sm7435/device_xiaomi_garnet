@@ -33,6 +33,9 @@
     <!-- Show 5G toggle in internet dialog when available -->
     <bool name="config_supportsVONR">true</bool>
 
+    <bool name="config_msdlFeedbackEnabled">false</bool>
+     
+
     <!-- Type of a sensor that provides a low-power estimate of the desired display
          brightness, suitable to listen to while the device is asleep (e.g. during
          always-on display) -->
