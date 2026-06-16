@@ -265,4 +265,4 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 include vendor/xiaomi/garnet/BoardConfigVendor.mk
 
 # Vendor MiuiCamera
--include device/xiaomi/miuicamera-garnet/BoardConfig.mk
+-include device/xiaomi/garnet-miuicamera/BoardConfig.mk
