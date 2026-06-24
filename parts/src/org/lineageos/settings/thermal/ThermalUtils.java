@@ -19,7 +19,6 @@ package org.lineageos.settings.thermal;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.UserHandle;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -27,7 +26,7 @@ import android.os.RemoteException;
 import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.provider.MediaStore;
-import android.telecom.DefaultDialerManager;
+import android.telecom.TelecomManager;
 import android.view.Display;
 import android.view.Surface;
 import android.view.WindowManager;
@@ -220,8 +219,7 @@ public final class ThermalUtils {
 
         if (AppUtils.isBrowserApp(mContext, packageName, UserHandle.myUserId())) {
             return STATE_BROWSER;
-        } else if (packageName.equals(
-                DefaultDialerManager.getDefaultDialerApplication(mContext))) {
+        } else if (packageName.equals(getDefaultDialerPackage())) {
             return STATE_DIALER;
         } else if (isCameraApp(packageName)) {
             return STATE_CAMERA;
@@ -229,6 +227,11 @@ public final class ThermalUtils {
             return STATE_DEFAULT;
         }
         // TODO: STATE_BENCHMARK, STATE_STREAMING
+    }
+
+    private String getDefaultDialerPackage() {
+        final TelecomManager telecomManager = mContext.getSystemService(TelecomManager.class);
+        return telecomManager != null ? telecomManager.getDefaultDialerPackage() : null;
     }
 
     private boolean isCameraApp(String packageName) {
