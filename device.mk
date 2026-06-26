@@ -175,18 +175,10 @@ PRODUCT_PACKAGES += \
     XiaomiEsimSwitcher \
     XiaomiEuicc
 
-# Debloat
-PRODUCT_PACKAGES += \
-    RemovePackagesGarnet
-
 # Enable whole-program R8 Java optimizations for SystemUI and system_server,
 # but also allow explicit overriding for testing and development.
 SYSTEM_OPTIMIZE_JAVA := true
 SYSTEMUI_OPTIMIZE_JAVA := true
-
-# Fastbootd
-PRODUCT_PACKAGES += \
-    fastbootd
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -336,7 +328,6 @@ PRODUCT_PACKAGES += \
     FrameworkOverlayGarnetGLEsim \
     FrameworkOverlayGarnetJPEsim \
     Launcher3DeviceOverlayGarnet \
-    LineageSDKOverlayGarnet \
     LineageSettingsOverlayGarnet \
     LineageSystemUIOverlayGarnet \
     NfcOverlayGarnet \
