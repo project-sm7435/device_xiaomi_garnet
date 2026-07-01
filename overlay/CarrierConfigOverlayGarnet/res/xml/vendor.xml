@@ -9671,14 +9671,23 @@
     <carrier_config mcc="452" mnc="01">
         <boolean name="carrier_volte_available_bool" value="true" />
     </carrier_config>
+    <!--菲律宾 PH Globe-->
     <carrier_config mcc="515" mnc="02">
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
     </carrier_config>
+    <!--菲律宾 PH Smart-->
     <carrier_config mcc="515" mnc="03">
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <!-- PA: Do not allow 5G NSA on PH Smart --> 
+        <int-array name="carrier_nr_availabilities_int_array" num="1"> 
+            <item value="2" /> 
+        </int-array>
+        <!-- PA: Enable VoNR on PH Smart -->
+        <boolean name="vonr_enabled_bool" value="true" />
     </carrier_config>
+    <!--菲律宾 PH DITO-->
     <carrier_config mcc="515" mnc="66">
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
@@ -10038,6 +10047,12 @@
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
         <boolean name="carrier_vt_available_bool" value="true" />
+        <!-- PA: Do not allow 5G NSA on IN Airtel--> 
+        <int-array name="carrier_nr_availabilities_int_array" num="1"> 
+            <item value="2" /> 
+        </int-array>
+        <!-- PA: Enable VoNR on IN Airtel-->
+        <boolean name="vonr_enabled_bool" value="true" />
     </carrier_config>
     <carrier_config mcc="405" mnc="874">
         <boolean name="carrier_volte_available_bool" value="true" />
