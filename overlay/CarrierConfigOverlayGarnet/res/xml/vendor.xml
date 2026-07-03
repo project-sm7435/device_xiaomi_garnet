@@ -9662,11 +9662,25 @@
     <carrier_config mcc="414" mnc="06">
         <boolean name="carrier_volte_available_bool" value="true" />
     </carrier_config>
+    <!--越南 VN Vinaphone-->
     <carrier_config mcc="452" mnc="02">
         <boolean name="carrier_volte_available_bool" value="true" />
+        <!-- PA: Do not allow 5G NSA on VN Vinaphone --> 
+        <int-array name="carrier_nr_availabilities_int_array" num="1"> 
+            <item value="2" /> 
+        </int-array>
+        <!-- PA: Enable VoNR on VN Vinaphone -->
+        <boolean name="vonr_enabled_bool" value="true" />
     </carrier_config>
+    <!--越南 VN Viettel-->
     <carrier_config mcc="452" mnc="04">
         <boolean name="carrier_volte_available_bool" value="true" />
+        <!-- PA: Do not allow 5G NSA on VN Viettel --> 
+        <int-array name="carrier_nr_availabilities_int_array" num="1"> 
+            <item value="2" /> 
+        </int-array>
+        <!-- PA: Enable VoNR on VN Viettel -->
+        <boolean name="vonr_enabled_bool" value="true" />
     </carrier_config>
     <carrier_config mcc="452" mnc="01">
         <boolean name="carrier_volte_available_bool" value="true" />
