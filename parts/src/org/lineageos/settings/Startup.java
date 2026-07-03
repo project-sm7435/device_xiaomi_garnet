@@ -32,7 +32,6 @@ import org.lineageos.settings.Constants;
 import org.lineageos.settings.autohbm.AutoHbmActivity;
 import org.lineageos.settings.autohbm.AutoHbmFragment;
 import org.lineageos.settings.autohbm.AutoHbmTileService;
-import org.lineageos.settings.saturation.SaturationFragment;
 import org.lineageos.settings.utils.ComponentUtils;
 import org.lineageos.settings.utils.FileUtils;
 
@@ -51,48 +50,10 @@ public class Startup extends BroadcastReceiver {
             // Adding a delay before applying the settings
             new Handler(Looper.getMainLooper()).postDelayed(() -> {
                 Log.d(TAG, "Applying saved settings...");
-                applySavedSaturation(context);
                 applyAutoHbmSettings(context);
             }, 5000); // Delay of 5 seconds
         }
     }
-
-    private void applySavedSaturation(Context context) {
-        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
-        int seekBarValue = sharedPrefs.getInt(Constants.KEY_SATURATION, 100);
-        Log.d(TAG, "Retrieved seekBarValue: " + seekBarValue);
-
-        // Apply the saved saturation value
-        applySaturation(seekBarValue);
-    }
-
-    private void applySaturation(int seekBarValue) {
-        Log.d(TAG, "Applying saturation: " + seekBarValue);
-
-        float saturation;
-        if (seekBarValue == 100) {
-            saturation = 1.001f;
-        } else {
-            saturation = seekBarValue / 100.0f;
-        }
-
-        IBinder surfaceFlinger = ServiceManager.getService("SurfaceFlinger");
-        if (surfaceFlinger != null) {
-            try {
-                Parcel data = Parcel.obtain();
-                data.writeInterfaceToken("android.ui.ISurfaceComposer");
-                data.writeFloat(saturation);
-                surfaceFlinger.transact(1022, data, null, 0);
-                data.recycle();
-                Log.d(TAG, "Saturation applied successfully");
-            } catch (RemoteException e) {
-                Log.e(TAG, "Failed to apply saturation", e);
-            }
-        } else {
-            Log.e(TAG, "SurfaceFlinger service not found");
-        }
-    }
-
     private void applyAutoHbmSettings(Context context) {
         Log.d(TAG, "Applying Auto HBM settings...");
         AutoHbmFragment.toggleAutoHbmService(context);

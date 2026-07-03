@@ -25,8 +25,4 @@ public class Constants {
     public static final String KEY_AUTO_HBM_DISABLE_TIME = "auto_hbm_disable_time";
     public static final String KEY_CURRENT_LUX_LEVEL = "current_lux_level";
     public static final String NODE_BRIGHTNESS = "/sys/class/backlight/panel0-backlight/brightness";
-
-    // Saturation
-    public static final String KEY_SATURATION = "saturation";
-    public static final String KEY_SATURATION_PREVIEW = "saturation_preview";
 }
