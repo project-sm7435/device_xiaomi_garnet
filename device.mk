@@ -119,6 +119,9 @@ PRODUCT_PACKAGES += \
     android.hardware.boot-service.qti \
     android.hardware.boot-service.qti.recovery
 
+# Axion common
+$(call inherit-product, device/axion/common/config/soc_map.mk)
+
 # Camera
 TARGET_BUILD_DEVICE_AS_WEBCAM := true
 
