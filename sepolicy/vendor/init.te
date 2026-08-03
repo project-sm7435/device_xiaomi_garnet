@@ -7,3 +7,6 @@ allow init vendor_sysfs_sd:file write;
 
 # Bluetooth
 set_prop(vendor_init, vendor_bt_stack_prop)
+
+allow vendor_init proc_swappiness:file w_file_perms;
+allow init proc_swappiness:file w_file_perms;
