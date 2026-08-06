@@ -160,8 +160,7 @@ BOARD_VENDOR_KERNEL_MODULES_LOAD := $(second_stage_modules) $(vendor_dlkm_module
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE)
 BOOT_KERNEL_MODULES := $(first_stage_modules) $(second_stage_modules)
 
-# Partitions - reserved size
-BOARD_PRODUCTIMAGE_MINIMAL_PARTITION_RESERVED_SIZE := false
+# Partitions
 -include vendor/lineage/config/BoardConfigReservedSize.mk
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 201326592
