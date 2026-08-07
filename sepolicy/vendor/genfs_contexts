@@ -1,3 +1,17 @@
+#Axion Performance
+genfscon proc /sys/vm/vfs_cache_pressure u:object_r:proc_drop_caches:s0
+genfscon proc /sys/vm/dirty_ratio u:object_r:proc_dirty:s0
+genfscon proc /sys/vm/swappiness u:object_r:proc:s0
+genfscon proc /sys/kernel/sched_migration_cost_ns u:object_r:proc_sched:s0
+genfscon proc /sys/kernel/sched_pelt_multiplier u:object_r:proc_sched:s0
+genfscon proc /sys/kernel/timer_migration u:object_r:proc_sched:s0
+genfscon proc /sys/kernel/printk_ratelimit u:object_r:proc_sched:s0
+genfscon proc /sys/kernel/printk_ratelimit_burst u:object_r:proc_sched:s0
+
+# Gpu Boost 
+genfscon sysfs /class/kgsl/kgsl-3d0/devfreq/available_frequencies u:object_r:sysfs_gpu:s0
+genfscon sysfs /class/kgsl/kgsl-3d0/devfreq/min_freq u:object_r:sysfs_gpu:s0
+
 # Audio
 genfscon sysfs /kernel/smartpa/smartpa_type u:object_r:smartpa_type:s0
 
