@@ -1,9 +1,12 @@
 # Charging service
 service vendor.charging /vendor/bin/charging
-    class main
+    class main charger
     user system
     group system
     seclabel u:r:charging:s0
 
 on property:sys.boot_completed=1
-        restart vendor.charging
+    restart vendor.charging
+
+on charger
+    start vendor.charging
