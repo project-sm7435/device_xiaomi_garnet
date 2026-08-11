@@ -1397,9 +1397,12 @@ vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.s
 vendor/lib64/egl/libq3dtools_esx.so
 vendor/lib64/libCB.so
 vendor/lib64/libOpenCL.so
+vendor/lib64/libOpenCL_adreno.so
 vendor/lib64/libadreno_app_profiles.so
 vendor/lib64/libadreno_utils.so
 vendor/lib64/libgpudataproducer.so
+vendor/lib64/libgpu_tonemapper
+vendor/lib64/libadreno_compiler_cl
 vendor/lib64/libgsl.so
 vendor/lib64/libkcl.so
 vendor/lib64/libkernelmanager.so
@@ -1416,9 +1419,15 @@ vendor/firmware/a710_zap.elf
 vendor/firmware/a710_zap.mbn
 vendor/firmware/a710_zap.mdt
 vendor/firmware/gmu_gen70000.bin
+vendor/firmware/gmu_gen70900.bin
+vendor/firmware/gen71100_sqe.fw
+vendor/firmware/gen71100_gmu.bin
+vendor/firmware/gen70900_sqe.fw
+vendor/firmware/gen70900_aqe.fw
 
 # Graphics (Vulkan)
 vendor/lib64/hw/vulkan.adreno.so
+vendor/lib64/hw/vulkan.pastel.so
 
 # Hotword enrollment
 product/etc/permissions/privapp-permissions-google-audio-system.xml:product/etc/permissions/privapp-permissions-hotword.xml
@@ -1501,7 +1510,6 @@ vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 vendor/etc/init/vendor.qti.media.c2audio@1.0-service.rc
 vendor/etc/seccomp_policy/codec2.vendor.base-arm64.policy
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm64.policy
-vendor/etc/vintf/manifest/c2_manifest_vendor.xml
 vendor/etc/vintf/manifest/c2_manifest_vendor_audio.xml
 vendor/lib64/libEvrcSwCodec.so
 vendor/lib64/libQcelp13SwCodec.so
@@ -1634,25 +1642,6 @@ vendor/lib64/libsubsystem_control.so
 # QCV
 vendor/bin/init.qti.qcv.sh
 vendor/etc/init/init.qti.qcv.rc
-
-# QESDK
-vendor/bin/qesdk-manager
-vendor/bin/sensors-qesdk
-vendor/etc/init/qesdk-manager.rc
-vendor/etc/init/vendor.sensors.qesdk.rc
-vendor/etc/seccomp_policy/qesdk.policy
-vendor/etc/seccomp_policy/sensors-qesdk.policy
-vendor/lib64/libqesdk.so
-vendor/lib64/libqesdk_manager.so
-vendor/lib64/vendor.qti.qesdhal@1.0.so
-vendor/lib64/vendor.qti.qesdhal@1.1-impl.so
-vendor/lib64/vendor.qti.qesdhal@1.1.so
-vendor/lib64/vendor.qti.qesdsys-V1-ndk_platform.so
-
-# QGuard
-vendor/bin/qguard
-vendor/etc/init/qguard.rc
-vendor/etc/qguard.json
 
 # QMI
 system/etc/sysconfig/qti_whitelist.xml
@@ -2102,6 +2091,28 @@ vendor/etc/thermal-video.conf
 vendor/etc/thermal-videochat.conf
 vendor/etc/thermald-devices.conf
 vendor/lib64/libthermalclient.so
+
+# Power
+vendor/lib64/libperfconfig.so
+vendor/lib/libperfconfig.so
+vendor/lib64/libqti-perfd.so
+vendor/lib/libqti-perfd.so
+vendor/lib64/libperfgluelayer.so
+vendor/lib/libperfgluelayer.so
+vendor/lib64/libperfioctl.so
+vendor/lib/libperfioctl.so
+vendor/lib64/libmemperfd.so
+vendor/lib64/vendor.qti.hardware.perf@2.0.so
+vendor/lib/vendor.qti.hardware.perf@2.0.so
+vendor/lib64/vendor.qti.hardware.perf@2.1.so
+vendor/lib/vendor.qti.hardware.perf@2.1.so
+vendor/lib64/vendor.qti.hardware.perf@2.2.so
+vendor/lib/vendor.qti.hardware.perf@2.2.so
+vendor/lib64/vendor.qti.hardware.perf@2.3.so
+vendor/lib/vendor.qti.hardware.perf@2.3.so
+vendor/lib64/libgamepoweroptfeature.so
+vendor/etc/pwr/PowerFeatureConfig.xml
+vendor/etc/pwr/GamePowerOptFeature.xml
 
 # Time services
 vendor/app/TimeService/TimeService.apk
