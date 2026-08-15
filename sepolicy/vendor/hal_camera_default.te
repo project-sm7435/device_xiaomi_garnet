@@ -1,4 +1,4 @@
-binder_call(hal_camera_default, platform_app)
+binder_call(hal_camera_default, platform_app_36)
 
 hal_client_domain(hal_camera_default, vendor_hal_qspmhal)
 
