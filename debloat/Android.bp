@@ -22,7 +22,6 @@ cc_prebuilt_binary {
         "OPScreenRecord",
         "Ornament",
         "PixelBuds",
-        "PixelLiveWallpaperPrebuilt",
         "SCONE",
         "SafetyHubPrebuilt",
         "ScribePrebuilt",
