@@ -37,6 +37,18 @@ on boot
     chown system system /sys/class/power_supply/battery/constant_charge_current
     chmod 0664 /sys/class/power_supply/battery/constant_charge_current
 
+    chown cameraserver camera /sys/devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-05/c42d000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/leds/led:torch_0/brightness
+    chown cameraserver camera /sys/devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-05/c42d000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/leds/led:torch_0/max_brightness
+    chown cameraserver camera /sys/devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-05/c42d000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/leds/led:torch_0/trigger
+    chown cameraserver camera /sys/devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-05/c42d000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/leds/led:switch_2/brightness
+    chown cameraserver camera /sys/devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-05/c42d000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/leds/led:switch_2/trigger
+    chmod 0660 /sys/devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-05/c42d000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/leds/led:torch_0/brightness
+    chmod 0660 /sys/devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-05/c42d000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/leds/led:torch_0/trigger
+    chmod 0660 /sys/devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-05/c42d000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/leds/led:switch_2/brightness
+    chmod 0660 /sys/devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-05/c42d000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/leds/led:switch_2/trigger
+    chown cameraserver camera /sys/class/thermal/thermal_message/flash_state
+    chmod 0660 /sys/class/thermal/thermal_message/flash_state
+
 on post-fs-data
     mkdir /data/vendor/misc 01771 system system
     mkdir /data/vendor/misc/mi_fp 0770 system system
