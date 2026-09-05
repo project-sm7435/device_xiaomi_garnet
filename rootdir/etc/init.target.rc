@@ -474,7 +474,7 @@ service vendor.sniffer.circular /vendor/bin/tcpdump -i wlan0 -W 3 -C 300 -w /dat
 
 on property:sys.boot_completed=1
     swapon_all /vendor/etc/fstab.zram
-    write /proc/sys/vm/swappiness 100
+    write /proc/sys/vm/swappiness 60
 
 on property:sys.boot_completed=1
     enable vendor.qvirtmgr
