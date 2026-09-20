@@ -1,1 +1,4 @@
+type vendor_poweroffalarm_app, domain;
+app_domain(vendor_poweroffalarm_app)
+
 allow vendor_poweroffalarm_app vendor_hal_alarmaidl_service:service_manager find;
