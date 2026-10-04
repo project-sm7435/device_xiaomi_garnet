@@ -1,0 +1,5 @@
+on property:persist.vendor.camera.mi.module.info=back_main=s5khp3;back_ultra=imx355;
+    setprop persist.sys.device_camera_info_rear "200,8,2"
+
+on property:persist.vendor.camera.mi.module.info=back_main=ov64b40;back_ultra=imx355;
+    setprop persist.sys.device_camera_info_rear "64,8,2"
