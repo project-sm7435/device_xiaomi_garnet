@@ -1,2 +1,5 @@
 get_prop(vendor_hal_gnss_qti, vendor_sensors_prop)
 get_prop(vendor_hal_gnss_qti, vendor_mi_ins_prop)
+
+# Allow GNSS HAL to access the DMA-BUF system heap
+allow vendor_hal_gnss_qti dmabuf_system_heap_device:chr_file { read open ioctl };
