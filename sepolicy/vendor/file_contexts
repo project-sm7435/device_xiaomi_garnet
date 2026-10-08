@@ -86,3 +86,6 @@
 /data/vendor/mac_addr(/.*)? u:object_r:vendor_mac_vendor_data_file:s0
 /data/vendor/wlan_logs(/.*)? u:object_r:vendor_wifi_vendor_data_file:s0
 /vendor/bin/nv_mac u:object_r:vendor_wcnss_service_exec:s0
+
+# Set read-ahead sysfs permissions
+/sys/devices/platform/soc/[^/]+/host[^/]*/target[^/]*/[^/]+/block/sda/queue/read_ahead_kb    u:object_r:sysfs_devices_block:s0
