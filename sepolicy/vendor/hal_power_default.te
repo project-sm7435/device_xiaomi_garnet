@@ -8,3 +8,8 @@ r_dir_file(hal_power_default, vendor_sysfs_graphics)
 allow hal_power_default vendor_latency_device:file rw_file_perms;
 allow hal_power_default vendor_latency_device:chr_file rw_file_perms;
 
+allow hal_power_default cgroup:dir search;
+allow hal_power_default cgroup:file rw_file_perms;
+allow hal_power_default sysfs_devices_system_cpu:file rw_file_perms;
+rw_dir_file(hal_power_default, sysfs_devfreq)
+rw_dir_file(hal_power_default, sysfs_kgsl)
