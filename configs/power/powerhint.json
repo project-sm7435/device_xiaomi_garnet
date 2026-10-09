@@ -662,24 +662,6 @@
             "Duration": 0
         },
         {
-            "PowerHint": "APP_START",
-            "Node": "KernelMsmPerformanceParametersCpuMinFreq",
-            "Duration": 0,
-            "Value": "0:1651200 1:1651200 2:1651200 3:1651200 4:2054400 5:2054400 6:2054400 7:2054400"
-        },
-        {
-            "PowerHint": "APP_START",
-            "Node": "ClassKgslKgsl3d0DevfreqMinFreq",
-            "Duration": 0,
-            "Value": "600000000"
-        },
-        {
-            "PowerHint": "APP_START",
-            "Node": "DevicesSystemCpuBusDcvsDdr19091000QcomBwmonDdrMinFreq",
-            "Duration": 0,
-            "Value": "1708000"
-        },
-        {
             "PowerHint": "UI_ANIMATION",
             "Node": "KernelMsmPerformanceParametersCpuMinFreq",
             "Duration": 0,
@@ -690,24 +672,6 @@
             "Node": "ClassKgslKgsl3d0DevfreqMinFreq",
             "Duration": 0,
             "Value": "600000000"
-        },
-        {
-            "PowerHint": "SYSTEM_UI",
-            "Node": "KernelMsmPerformanceParametersCpuMinFreq",
-            "Duration": 0,
-            "Value": "0:1651200 1:1651200 2:1651200 3:1651200 4:2054400 5:2054400 6:2054400 7:2054400"
-        },
-        {
-            "PowerHint": "SYSTEM_UI",
-            "Node": "ClassKgslKgsl3d0DevfreqMinFreq",
-            "Duration": 0,
-            "Value": "600000000"
-        },
-        {
-            "PowerHint": "SYSTEM_UI",
-            "Node": "DevicesSystemCpuBusDcvsDdr19091000QcomBwmonDdrMinFreq",
-            "Duration": 0,
-            "Value": "1708000"
         },
         {
             "PowerHint": "FLING",
