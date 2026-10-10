@@ -3,3 +3,7 @@ set_prop(vendor_init, vendor_qcc_prop)
 
 # KProfiles
 allow init sysfs_kprofiles:file { setattr };
+
+allow init vendor_sysfs_sd:file w_file_perms;
+allow vendor_init proc_swappiness:file w_file_perms;
+allow vendor_qti_init_shell proc_page_cluster:file w_file_perms;

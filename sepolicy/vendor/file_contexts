@@ -85,4 +85,4 @@
 /vendor/bin/nv_mac u:object_r:vendor_wcnss_service_exec:s0
 
 # Set read-ahead sysfs permissions
-/sys/devices/platform/soc/[^/]+/host[^/]*/target[^/]*/[^/]+/block/sda/queue/read_ahead_kb    u:object_r:sysfs_devices_block:s0
+/sys/devices/platform/soc/[^/]+/host[^/]*/target[^/]*/[^/]+/block/sd[a-f]/queue/read_ahead_kb    u:object_r:vendor_sysfs_sd:s0
