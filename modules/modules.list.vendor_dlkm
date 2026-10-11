@@ -44,4 +44,3 @@ rmnet_wlan.ko
 rmnet_aps.ko
 rmnet_sch.ko
 msm_video.ko
-dcvs_boost.ko
