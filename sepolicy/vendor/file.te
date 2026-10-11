@@ -30,3 +30,6 @@ type sysfs_kprofiles, sysfs_type, fs_type;
 
 # Swappiness sysfs permissions
 type proc_swappiness, fs_type, proc_type;
+
+# Power
+type vendor_sysfs_msm_subsys, fs_type, sysfs_type;
