@@ -217,6 +217,7 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.garnet.rc \
     init.qcom.rc \
+    init.sm7435.rc \
     init.recovery.qcom.rc \
     init.target.rc \
     ueventd-odm.rc \
