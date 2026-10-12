@@ -587,17 +587,6 @@ on property:sys.lmkd.memory.compact=1
     setprop sys.lmkd.memory.compact 0
     write /proc/sys/vm/compact_memory 1
 
-# Apply WALT after boot completion and PowerHAL hint processing is enabled
-on property:sys.boot_completed=1 && property:vendor.powerhal.init=1
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor walt
-    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor walt
-    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor walt
-    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor walt
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor walt
-    write /sys/devices/system/cpu/cpu5/cpufreq/scaling_governor walt
-    write /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor walt
-    write /sys/devices/system/cpu/cpu7/cpufreq/scaling_governor walt
-
 # Sync attribute volume between system and vendor
 on property:sys.volume.stream.music.device.speaker=*
     setprop vendor.volume.stream.music.device.speaker ${sys.volume.stream.music.device.speaker}
