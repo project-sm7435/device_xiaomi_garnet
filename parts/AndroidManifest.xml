@@ -39,7 +39,7 @@
         android:persistent="true"
         android:defaultToDeviceProtectedStorage="true"
         android:directBootAware="true"
-        android:theme="@style/Theme.SubSettingsBase">
+        android:theme="@style/Theme.SubSettingsBase.Expressive">
 
         <receiver
             android:name=".BootCompletedReceiver"
@@ -179,7 +179,7 @@
         <activity
             android:name=".gamebar.GameBarSettingsActivity"
             android:label="@string/game_bar_title"
-            android:theme="@style/Theme.SubSettingsBase"
+            android:theme="@style/Theme.SubSettingsBase.Expressive"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
@@ -218,7 +218,7 @@
         <activity
             android:name=".gamebar.GameBarPerAppConfigActivity"
             android:exported="false"
-            android:theme="@style/Theme.SubSettingsBase" />    
+            android:theme="@style/Theme.SubSettingsBase.Expressive" />    
 
         <!-- GameBar BootReceiver -->
         <receiver
