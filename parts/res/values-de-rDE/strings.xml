@@ -34,7 +34,9 @@
     <string name="thermal_camera">Kamera</string>
     <string name="thermal_dialer">Telefon</string>
     <string name="thermal_gaming">Gaming</string>
+    <string name="thermal_navigation">Navigation</string>
     <string name="thermal_streaming">Streaming</string>
+    <string name="thermal_video">Video</string>
 
     <!-- Clear Speaker -->
    <string name="clear_speaker_title">Lautsprecher reinigen</string>
@@ -56,7 +58,7 @@
     <string name="custom_seekbar_default_value">standardmäßig</string>
     <string name="custom_seekbar_default_value_to_set">Standardwert: <xliff:g id="v">%s</xliff:g>\nZum Festlegen lange tippen</string>
     <string name="custom_seekbar_default_value_is_set">Standardwert ist festgelegt</string>
-
+    
     <!-- Auto HBM -->
     <string name="auto_hbm_title">Automatischer Hochhelligkeitsmodus (HBM)</string>
     <string name="auto_hbm_main_switch_title">Automatischen HBM verwenden</string>
@@ -158,15 +160,20 @@
     <string name="game_bar_per_app_config_title">Apps konfigurieren</string>
     <string name="game_bar_per_app_config_summary">Auswählen, welche Apps die GameBar automatisch aktivieren</string>
 
+    <!-- Dashboard group headers -->
+    <string name="parts_group_title">Komponenten</string>
     <string name="others_group_title">Sonstige</string>
 
+    <!-- Thermal profile descriptions -->
     <string name="thermal_default_desc">Standardverhalten des Systems, ohne thermische Anpassung pro App.</string>
     <string name="thermal_benchmark_desc">Maximale Leistung mit gelockerten Temperaturgrenzen. Das Gerät kann warm werden.</string>
     <string name="thermal_browser_desc">Ausgewogene Anpassung zum Surfen im Web und Lesen.</string>
     <string name="thermal_camera_desc">Angepasst für Fotos und Videoaufnahmen.</string>
     <string name="thermal_dialer_desc">Leichte Anpassung für Sprachanrufe, mit wenig Wärme und Verbrauch.</string>
     <string name="thermal_gaming_desc">Anhaltende Leistung für Spiele, bei höheren Temperaturen.</string>
+    <string name="thermal_navigation_desc">Gleichmäßige Anpassung für Karten und Schritt-für-Schritt-Navigation, auch bei längerer Bildschirmnutzung.</string>
     <string name="thermal_streaming_desc">Ausgewogene Anpassung für lange Video- und Musik-Streaming-Sitzungen.</string>
+    <string name="thermal_video_desc">Effiziente Anpassung für die lokale Videowiedergabe bei geringer Wärmeentwicklung und niedrigem Stromverbrauch.</string>
     <string name="thermal_search_hint">Apps suchen</string>
     <string name="thermal_search_hint_short">Suchen\u2026</string>
     <string name="thermal_profile_footer">Das ausgewählte Profil wird automatisch angewendet, während die App verwendet wird.</string>

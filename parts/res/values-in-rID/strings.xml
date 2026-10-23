@@ -34,7 +34,9 @@
     <string name="thermal_camera">Kamera</string>
     <string name="thermal_dialer">Panggilan</string>
     <string name="thermal_gaming">Gaming</string>
+    <string name="thermal_navigation">Navigasi</string>
     <string name="thermal_streaming">Streaming</string>
+    <string name="thermal_video">Video</string>
 
     <!-- Clear Speaker -->
    <string name="clear_speaker_title">Bersihkan speaker</string>
@@ -158,15 +160,20 @@
     <string name="game_bar_per_app_config_title">Konfigurasi Aplikasi</string>
     <string name="game_bar_per_app_config_summary">Pilih aplikasi mana yang mengaktifkan GameBar secara otomatis</string>
 
+    <!-- Dashboard group headers -->
+    <string name="parts_group_title">Komponen</string>
     <string name="others_group_title">Lainnya</string>
 
+    <!-- Thermal profile descriptions -->
     <string name="thermal_default_desc">Perilaku default sistem, tanpa penyetelan termal per aplikasi.</string>
     <string name="thermal_benchmark_desc">Performa maksimum dengan batas termal yang dilonggarkan. Perangkat mungkin menjadi panas.</string>
     <string name="thermal_browser_desc">Penyetelan seimbang untuk menjelajah web dan membaca.</string>
     <string name="thermal_camera_desc">Disetel untuk mengambil foto dan merekam video.</string>
     <string name="thermal_dialer_desc">Penyetelan ringan untuk panggilan suara, dengan panas dan daya rendah.</string>
     <string name="thermal_gaming_desc">Performa berkelanjutan untuk game, memungkinkan suhu lebih tinggi.</string>
+    <string name="thermal_navigation_desc">Penyetelan stabil untuk peta dan navigasi belokan demi belokan, bahkan saat layar menyala dalam waktu lama.</string>
     <string name="thermal_streaming_desc">Penyetelan seimbang untuk sesi streaming video dan musik yang lama.</string>
+    <string name="thermal_video_desc">Penyetelan efisien untuk pemutaran video lokal, dengan panas dan penggunaan daya rendah.</string>
     <string name="thermal_search_hint">Telusuri aplikasi</string>
     <string name="thermal_search_hint_short">Telusuri\u2026</string>
     <string name="thermal_profile_footer">Profil yang dipilih diterapkan secara otomatis saat aplikasi digunakan.</string>

@@ -34,7 +34,9 @@
     <string name="thermal_camera">Fotocamera</string>
     <string name="thermal_dialer">Telefono</string>
     <string name="thermal_gaming">Giochi</string>
+    <string name="thermal_navigation">Navigazione</string>
     <string name="thermal_streaming">Streaming</string>
+    <string name="thermal_video">Video</string>
 
     <!-- Clear Speaker -->
    <string name="clear_speaker_title">Pulisci altoparlante</string>
@@ -56,7 +58,7 @@
     <string name="custom_seekbar_default_value">per impostazione predefinita</string>
     <string name="custom_seekbar_default_value_to_set">Valore predefinito: <xliff:g id="v">%s</xliff:g>\nTocca a lungo per impostare</string>
     <string name="custom_seekbar_default_value_is_set">Il valore predefinito è impostato</string>
-
+    
     <!-- Auto HBM -->
     <string name="auto_hbm_title">Modalità alta luminosità automatica (HBM)</string>
     <string name="auto_hbm_main_switch_title">Usa HBM automatico</string>
@@ -158,15 +160,20 @@
     <string name="game_bar_per_app_config_title">Configura le app</string>
     <string name="game_bar_per_app_config_summary">Scegli quali app attivano GameBar automaticamente</string>
 
+    <!-- Dashboard group headers -->
+    <string name="parts_group_title">Componenti</string>
     <string name="others_group_title">Altri</string>
 
+    <!-- Thermal profile descriptions -->
     <string name="thermal_default_desc">Comportamento predefinito del sistema, senza regolazione termica per app.</string>
     <string name="thermal_benchmark_desc">Prestazioni massime con limiti termici allentati. Il dispositivo può surriscaldarsi.</string>
     <string name="thermal_browser_desc">Regolazione bilanciata per navigare sul web e leggere.</string>
     <string name="thermal_camera_desc">Ottimizzato per scattare foto e registrare video.</string>
     <string name="thermal_dialer_desc">Regolazione leggera per le chiamate vocali, con poco calore e consumo.</string>
     <string name="thermal_gaming_desc">Prestazioni sostenute per i giochi, con temperature più elevate.</string>
+    <string name="thermal_navigation_desc">Regolazione stabile per mappe e navigazione passo-passo, anche con lo schermo acceso per lunghi periodi.</string>
     <string name="thermal_streaming_desc">Regolazione bilanciata per lunghe sessioni di streaming video e musicale.</string>
+    <string name="thermal_video_desc">Regolazione efficiente per la riproduzione di video locali, con poco calore e consumi ridotti.</string>
     <string name="thermal_search_hint">Cerca app</string>
     <string name="thermal_search_hint_short">Cerca\u2026</string>
     <string name="thermal_profile_footer">Il profilo selezionato viene applicato automaticamente mentre l\'app è in uso.</string>

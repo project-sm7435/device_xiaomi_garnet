@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Xiaomi Settings -->
@@ -19,12 +34,14 @@
     <string name="thermal_camera">Kamera</string>
     <string name="thermal_dialer">Çevirici</string>
     <string name="thermal_gaming">Oyun</string>
+    <string name="thermal_navigation">Navigasyon</string>
     <string name="thermal_streaming">Yayın Akışı</string>
+    <string name="thermal_video">Video</string>
 
     <!-- Clear Speaker -->
-    <string name="clear_speaker_title">Hoparlör Temizleyici</string>
-    <string name="clear_speaker_summary">Hoparlörü temizlemek için 30 saniyelik bir ses çal</string>
-    <string name="clear_speaker_description">Hoparlörünüzün hafifçe tozla tıkandığını düşünüyorsanız bu özelliği bir veya iki kez çalıştırın. Medya ses düzeyini maksimuma ayarlayın.\n\nHoparlör aşırı tıkalıysa, cihazınızı hoparlör aşağı bakacak şekilde sallarken bu özelliği 2-5 kez çalıştırın.</string>
+   <string name="clear_speaker_title">Hoparlör Temizleyici</string>
+   <string name="clear_speaker_summary">Hoparlörü temizlemek için 30 saniyelik bir ses çal</string>
+   <string name="clear_speaker_description">Hoparlörünüzün hafifçe tozla tıkandığını düşünüyorsanız bu özelliği bir veya iki kez çalıştırın. Medya ses düzeyini maksimuma ayarlayın.\n\nHoparlör aşırı tıkalıysa, cihazınızı hoparlör aşağı bakacak şekilde sallarken bu özelliği 2-5 kez çalıştırın.</string>
 
     <!-- Saturation -->
     <string name="saturation_title">Ekran Doygunluğu</string>
@@ -143,15 +160,20 @@
     <string name="game_bar_per_app_config_title">Uygulamaları Yapılandır</string>
     <string name="game_bar_per_app_config_summary">Hangi uygulamaların GameBar\'ı otomatik etkinleştireceğini seçin</string>
 
+    <!-- Dashboard group headers -->
+    <string name="parts_group_title">Parçalar</string>
     <string name="others_group_title">Diğer</string>
 
+    <!-- Thermal profile descriptions -->
     <string name="thermal_default_desc">Uygulama başına termal ayarı olmayan sistem varsayılan davranışı.</string>
     <string name="thermal_benchmark_desc">Gevşetilmiş termal sınırlarla maksimum performans. Cihaz ısınabilir.</string>
     <string name="thermal_browser_desc">Web\'de gezinme ve okuma için dengeli ayar.</string>
     <string name="thermal_camera_desc">Fotoğraf çekmek ve video kaydetmek için ayarlandı.</string>
     <string name="thermal_dialer_desc">Düşük ısı ve güç kullanımıyla sesli aramalar için hafif ayar.</string>
     <string name="thermal_gaming_desc">Daha yüksek sıcaklıklara izin veren, oyunlar için sürdürülebilir performans.</string>
+    <string name="thermal_navigation_desc">Haritalar ve adım adım navigasyon için, ekran uzun süre açık kalsa bile kararlı ayarlama.</string>
     <string name="thermal_streaming_desc">Uzun video ve müzik akışı oturumları için dengeli ayar.</string>
+    <string name="thermal_video_desc">Yerel video oynatma için düşük ısı ve düşük güç kullanımıyla verimli ayarlama.</string>
     <string name="thermal_search_hint">Uygulamalarda ara</string>
     <string name="thermal_search_hint_short">Ara\u2026</string>
     <string name="thermal_profile_footer">Seçilen profil, uygulama kullanılırken otomatik olarak uygulanır.</string>

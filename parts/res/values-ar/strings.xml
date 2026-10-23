@@ -34,7 +34,9 @@
     <string name="thermal_camera">الكاميرا</string>
     <string name="thermal_dialer">الهاتف</string>
     <string name="thermal_gaming">الألعاب</string>
+    <string name="thermal_navigation">التنقل</string>
     <string name="thermal_streaming">البث</string>
+    <string name="thermal_video">فيديو</string>
 
     <!-- Clear Speaker -->
    <string name="clear_speaker_title">تنظيف مكبر الصوت</string>
@@ -56,7 +58,7 @@
     <string name="custom_seekbar_default_value">افتراضيًا</string>
     <string name="custom_seekbar_default_value_to_set">القيمة الافتراضية: <xliff:g id="v">%s</xliff:g>\nاضغط مطولًا للتعيين</string>
     <string name="custom_seekbar_default_value_is_set">تم تعيين القيمة الافتراضية</string>
-
+    
     <!-- Auto HBM -->
     <string name="auto_hbm_title">وضع السطوع العالي التلقائي (HBM)</string>
     <string name="auto_hbm_main_switch_title">استخدام HBM التلقائي</string>
@@ -158,15 +160,20 @@
     <string name="game_bar_per_app_config_title">تكوين التطبيقات</string>
     <string name="game_bar_per_app_config_summary">اختيار التطبيقات التي تفعّل GameBar تلقائيًا</string>
 
+    <!-- Dashboard group headers -->
+    <string name="parts_group_title">الأجزاء</string>
     <string name="others_group_title">أخرى</string>
 
+    <!-- Thermal profile descriptions -->
     <string name="thermal_default_desc">سلوك النظام الافتراضي، دون ضبط حراري لكل تطبيق.</string>
     <string name="thermal_benchmark_desc">أقصى أداء مع حدود حرارية مخففة. قد يسخن الجهاز.</string>
     <string name="thermal_browser_desc">ضبط متوازن لتصفح الويب والقراءة.</string>
     <string name="thermal_camera_desc">مضبوط لالتقاط الصور وتسجيل مقاطع الفيديو.</string>
     <string name="thermal_dialer_desc">ضبط خفيف للمكالمات الصوتية، مع حرارة واستهلاك منخفضين.</string>
     <string name="thermal_gaming_desc">أداء مستدام للألعاب، مع السماح بدرجات حرارة أعلى.</string>
+    <string name="thermal_navigation_desc">ضبط مستقر للخرائط والملاحة خطوة بخطوة، حتى مع بقاء الشاشة قيد التشغيل لفترات طويلة.</string>
     <string name="thermal_streaming_desc">ضبط متوازن لجلسات بث الفيديو والموسيقى الطويلة.</string>
+    <string name="thermal_video_desc">ضبط فعّال لتشغيل الفيديو المحلي مع حرارة واستهلاك طاقة منخفضين.</string>
     <string name="thermal_search_hint">البحث في التطبيقات</string>
     <string name="thermal_search_hint_short">بحث\u2026</string>
     <string name="thermal_profile_footer">يتم تطبيق الملف المحدد تلقائيًا أثناء استخدام التطبيق.</string>

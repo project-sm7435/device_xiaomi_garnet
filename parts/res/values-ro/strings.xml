@@ -34,7 +34,9 @@
     <string name="thermal_camera">Cameră</string>
     <string name="thermal_dialer">Telefon</string>
     <string name="thermal_gaming">Jocuri</string>
+    <string name="thermal_navigation">Navigație</string>
     <string name="thermal_streaming">Streaming</string>
+    <string name="thermal_video">Video</string>
 
     <!-- Clear Speaker -->
    <string name="clear_speaker_title">Curăță difuzorul</string>
@@ -158,15 +160,20 @@
     <string name="game_bar_per_app_config_title">Configurează aplicațiile</string>
     <string name="game_bar_per_app_config_summary">Alege ce aplicații activează automat GameBar</string>
 
+    <!-- Dashboard group headers -->
+    <string name="parts_group_title">Componente</string>
     <string name="others_group_title">Altele</string>
 
+    <!-- Thermal profile descriptions -->
     <string name="thermal_default_desc">Comportamentul implicit al sistemului, fără reglare termică per aplicație.</string>
     <string name="thermal_benchmark_desc">Performanță maximă cu limite termice relaxate. Dispozitivul se poate încălzi.</string>
     <string name="thermal_browser_desc">Reglare echilibrată pentru navigare web și citit.</string>
     <string name="thermal_camera_desc">Reglat pentru fotografiere și înregistrare video.</string>
     <string name="thermal_dialer_desc">Reglare ușoară pentru apeluri vocale, cu căldură și consum reduse.</string>
     <string name="thermal_gaming_desc">Performanță susținută pentru jocuri, permițând temperaturi mai ridicate.</string>
+    <string name="thermal_navigation_desc">Reglaj stabil pentru hărți și navigație pas cu pas, chiar și cu ecranul pornit perioade îndelungate.</string>
     <string name="thermal_streaming_desc">Reglare echilibrată pentru sesiuni lungi de streaming video și muzică.</string>
+    <string name="thermal_video_desc">Reglaj eficient pentru redarea video locală, cu încălzire redusă și consum redus de energie.</string>
     <string name="thermal_search_hint">Caută aplicații</string>
     <string name="thermal_search_hint_short">Caută\u2026</string>
     <string name="thermal_profile_footer">Profilul selectat este aplicat automat în timp ce aplicația este utilizată.</string>

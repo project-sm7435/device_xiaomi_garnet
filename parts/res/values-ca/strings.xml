@@ -34,7 +34,9 @@
     <string name="thermal_camera">Càmera</string>
     <string name="thermal_dialer">Telèfon</string>
     <string name="thermal_gaming">Jocs</string>
+    <string name="thermal_navigation">Navegació</string>
     <string name="thermal_streaming">Transmissió</string>
+    <string name="thermal_video">Vídeo</string>
 
     <!-- Clear Speaker -->
    <string name="clear_speaker_title">Neteja l\'altaveu</string>
@@ -158,15 +160,20 @@
     <string name="game_bar_per_app_config_title">Configura les aplicacions</string>
     <string name="game_bar_per_app_config_summary">Tria quines aplicacions activen GameBar automàticament</string>
 
+    <!-- Dashboard group headers -->
+    <string name="parts_group_title">Peces</string>
     <string name="others_group_title">Altres</string>
 
+    <!-- Thermal profile descriptions -->
     <string name="thermal_default_desc">Comportament predeterminat del sistema, sense ajust tèrmic per aplicació.</string>
     <string name="thermal_benchmark_desc">Rendiment màxim amb límits tèrmics relaxats. El dispositiu es pot escalfar.</string>
     <string name="thermal_browser_desc">Ajust equilibrat per navegar per la web i llegir.</string>
     <string name="thermal_camera_desc">Ajustat per fer fotos i gravar vídeos.</string>
     <string name="thermal_dialer_desc">Ajust lleuger per a trucades de veu, amb poca calor i consum.</string>
     <string name="thermal_gaming_desc">Rendiment sostingut per a jocs, amb temperatures més altes.</string>
+    <string name="thermal_navigation_desc">Ajust estable per a mapes i navegació pas a pas, fins i tot amb la pantalla encesa durant llargs períodes.</string>
     <string name="thermal_streaming_desc">Ajust equilibrat per a sessions llargues de transmissió de vídeo i música.</string>
+    <string name="thermal_video_desc">Ajust eficient per a la reproducció de vídeo local, amb poca calor i baix consum d\'energia.</string>
     <string name="thermal_search_hint">Cerca aplicacions</string>
     <string name="thermal_search_hint_short">Cerca\u2026</string>
     <string name="thermal_profile_footer">El perfil seleccionat s\'aplica automàticament mentre l\'aplicació està en ús.</string>
