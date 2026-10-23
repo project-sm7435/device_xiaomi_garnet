@@ -34,7 +34,9 @@
     <string name="thermal_camera">מצלמה</string>
     <string name="thermal_dialer">חייגן</string>
     <string name="thermal_gaming">משחקים</string>
+    <string name="thermal_navigation">ניווט</string>
     <string name="thermal_streaming">סטרימינג</string>
+    <string name="thermal_video">וידאו</string>
 
     <!-- Clear Speaker -->
    <string name="clear_speaker_title">ניקוי הרמקול</string>
@@ -158,15 +160,20 @@
     <string name="game_bar_per_app_config_title">הגדרת אפליקציות</string>
     <string name="game_bar_per_app_config_summary">בחירת האפליקציות שמפעילות את GameBar אוטומטית</string>
 
+    <!-- Dashboard group headers -->
+    <string name="parts_group_title">רכיבים</string>
     <string name="others_group_title">אחרים</string>
 
+    <!-- Thermal profile descriptions -->
     <string name="thermal_default_desc">התנהגות ברירת המחדל של המערכת, ללא כוונון תרמי לכל אפליקציה.</string>
     <string name="thermal_benchmark_desc">ביצועים מרביים עם מגבלות תרמיות מרוככות. המכשיר עלול להתחמם.</string>
     <string name="thermal_browser_desc">כוונון מאוזן לגלישה באינטרנט ולקריאה.</string>
     <string name="thermal_camera_desc">מכוונן לצילום תמונות והקלטת סרטונים.</string>
     <string name="thermal_dialer_desc">כוונון קל לשיחות קוליות, עם חום וצריכה נמוכים.</string>
     <string name="thermal_gaming_desc">ביצועים מתמשכים למשחקים, המאפשרים טמפרטורות גבוהות יותר.</string>
+    <string name="thermal_navigation_desc">כוונון יציב למפות ולניווט צעד אחר צעד, גם כשהמסך דלוק לאורך זמן.</string>
     <string name="thermal_streaming_desc">כוונון מאוזן להזרמת וידאו ומוזיקה ממושכת.</string>
+    <string name="thermal_video_desc">כוונון יעיל להפעלת וידאו מקומי, עם חום וצריכת חשמל נמוכים.</string>
     <string name="thermal_search_hint">חיפוש אפליקציות</string>
     <string name="thermal_search_hint_short">חיפוש\u2026</string>
     <string name="thermal_profile_footer">הפרופיל שנבחר מוחל באופן אוטומטי בזמן שהאפליקציה בשימוש.</string>
