@@ -19,7 +19,6 @@ package org.lineageos.settings.thermal;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.UserHandle;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -36,6 +35,7 @@ import androidx.preference.PreferenceManager;
 
 import com.android.settingslib.applications.AppUtils;
 
+import org.lineageos.settings.R;
 import org.lineageos.settings.utils.FileUtils;
 
 import java.util.List;
@@ -54,6 +54,9 @@ public final class ThermalUtils {
     protected static final int STATE_NAVIGATION = 6;
     protected static final int STATE_STREAMING = 7;
     protected static final int STATE_VIDEO = 8;
+
+    // Number of profiles (STATE_DEFAULT..STATE_VIDEO)
+    protected static final int PROFILE_COUNT = 9;
 
     private static final Map<Integer, String> THERMAL_STATE_MAP = Map.of(
         STATE_DEFAULT, "0",
@@ -94,6 +97,60 @@ public final class ThermalUtils {
     public static void startService(Context context) {
         context.startServiceAsUser(new Intent(context, ThermalService.class),
                 UserHandle.CURRENT);
+    }
+
+    /**
+     * Returns the string resource id for the display name of a thermal profile.
+     */
+    protected static int getProfileNameRes(int state) {
+        switch (state) {
+            case STATE_BENCHMARK:
+                return R.string.thermal_benchmark;
+            case STATE_BROWSER:
+                return R.string.thermal_browser;
+            case STATE_CAMERA:
+                return R.string.thermal_camera;
+            case STATE_DIALER:
+                return R.string.thermal_dialer;
+            case STATE_GAMING:
+                return R.string.thermal_gaming;
+            case STATE_NAVIGATION:
+                return R.string.thermal_navigation;
+            case STATE_STREAMING:
+                return R.string.thermal_streaming;
+            case STATE_VIDEO:
+                return R.string.thermal_video;
+            case STATE_DEFAULT:
+            default:
+                return R.string.thermal_default;
+        }
+    }
+
+    /**
+     * Returns the string resource id for the description of a thermal profile.
+     */
+    protected static int getProfileDescRes(int state) {
+        switch (state) {
+            case STATE_BENCHMARK:
+                return R.string.thermal_benchmark_desc;
+            case STATE_BROWSER:
+                return R.string.thermal_browser_desc;
+            case STATE_CAMERA:
+                return R.string.thermal_camera_desc;
+            case STATE_DIALER:
+                return R.string.thermal_dialer_desc;
+            case STATE_GAMING:
+                return R.string.thermal_gaming_desc;
+            case STATE_NAVIGATION:
+                return R.string.thermal_navigation_desc;
+            case STATE_STREAMING:
+                return R.string.thermal_streaming_desc;
+            case STATE_VIDEO:
+                return R.string.thermal_video_desc;
+            case STATE_DEFAULT:
+            default:
+                return R.string.thermal_default_desc;
+        }
     }
 
     private void writeValue(String profiles) {
