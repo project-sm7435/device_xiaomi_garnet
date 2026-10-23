@@ -34,7 +34,9 @@
     <string name="thermal_camera">Máy ảnh</string>
     <string name="thermal_dialer">Trình quay số</string>
     <string name="thermal_gaming">Chơi game</string>
+    <string name="thermal_navigation">Điều hướng</string>
     <string name="thermal_streaming">Phát trực tuyến</string>
+    <string name="thermal_video">Video</string>
 
     <!-- Clear Speaker -->
    <string name="clear_speaker_title">Làm sạch loa</string>
@@ -158,15 +160,20 @@
     <string name="game_bar_per_app_config_title">Cấu hình ứng dụng</string>
     <string name="game_bar_per_app_config_summary">Chọn ứng dụng nào sẽ tự động bật GameBar</string>
 
+    <!-- Dashboard group headers -->
+    <string name="parts_group_title">Linh kiện</string>
     <string name="others_group_title">Khác</string>
 
+    <!-- Thermal profile descriptions -->
     <string name="thermal_default_desc">Hành vi mặc định của hệ thống, không điều chỉnh nhiệt cho từng ứng dụng.</string>
     <string name="thermal_benchmark_desc">Hiệu năng tối đa với giới hạn nhiệt được nới lỏng. Thiết bị có thể nóng lên.</string>
     <string name="thermal_browser_desc">Điều chỉnh cân bằng để duyệt web và đọc.</string>
     <string name="thermal_camera_desc">Được điều chỉnh để chụp ảnh và quay video.</string>
     <string name="thermal_dialer_desc">Điều chỉnh nhẹ cho cuộc gọi thoại, ít nóng và ít tốn pin.</string>
     <string name="thermal_gaming_desc">Hiệu năng bền bỉ cho trò chơi, cho phép nhiệt độ cao hơn.</string>
+    <string name="thermal_navigation_desc">Tinh chỉnh ổn định cho bản đồ và điều hướng từng chặng, ngay cả khi màn hình bật trong thời gian dài.</string>
     <string name="thermal_streaming_desc">Điều chỉnh cân bằng cho các phiên phát video và nhạc dài.</string>
+    <string name="thermal_video_desc">Tinh chỉnh hiệu quả cho phát video cục bộ, ít tỏa nhiệt và tiết kiệm điện.</string>
     <string name="thermal_search_hint">Tìm kiếm ứng dụng</string>
     <string name="thermal_search_hint_short">Tìm kiếm\u2026</string>
     <string name="thermal_profile_footer">Hồ sơ đã chọn được áp dụng tự động khi ứng dụng đang được sử dụng.</string>

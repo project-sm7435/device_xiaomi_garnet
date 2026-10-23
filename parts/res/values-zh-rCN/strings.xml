@@ -16,7 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- 小米设置 -->
+    <!-- Xiaomi Settings -->
     <string name="app_title">小米设置</string>
     <string name="tile_add">添加磁贴</string>
     <string name="tile_added">磁贴已添加</string>
@@ -25,7 +25,7 @@
     <string name="tile_on">开</string>
     <string name="tile_off">关</string>
 
-    <!-- 温度配置文件 -->
+    <!-- Thermal profiles -->
     <string name="thermal_title">温度配置文件</string>
     <string name="thermal_summary">调整应用温度配置文件以获得最佳性能</string>
     <string name="thermal_default">无优化</string>
@@ -34,38 +34,32 @@
     <string name="thermal_camera">相机</string>
     <string name="thermal_dialer">拨号</string>
     <string name="thermal_gaming">游戏</string>
+    <string name="thermal_navigation">导航</string>
     <string name="thermal_streaming">流媒体</string>
+    <string name="thermal_video">视频</string>
 
-    <!-- 应用刷新率 -->
-    <string name="refresh_title">应用刷新率</string>
-    <string name="refresh_summary">为特定应用设置最大刷新率</string>
-    <string name="refresh_default">默认</string>
-    <string name="refresh_standard">60 Hz</string>
-    <string name="refresh_high">90 Hz</string>
-    <string name="refresh_extreme">120 Hz</string>
-
-    <!-- 扬声器清理 -->
+    <!-- Clear Speaker -->
    <string name="clear_speaker_title">扬声器清理</string>
    <string name="clear_speaker_summary">播放30秒音频以清理扬声器</string>
    <string name="clear_speaker_description">如果您发现扬声器轻微被灰尘堵塞，请运行此功能一至两次。请将媒体音量调至最大。\n\n如果扬声器堵塞严重，请在运行此功能2-5次的同时，将设备扬声器朝下摇晃。</string>
 
-    <!-- 饱和度 -->
+    <!-- Saturation -->
     <string name="saturation_title">显示饱和度</string>
     <string name="saturation_summary">控制显示屏的饱和度级别</string>
     <string name="saturation_footer_summary">在显示设置中更改色彩模式将覆盖饱和度级别，需要重新应用。</string>
 
-    <!-- 图片预览 -->
+    <!-- Image preview -->
     <string name="image_preview_content_description">预览</string>
     <string name="image_preview_next_page_content_description">下一页</string>
     <string name="image_preview_previous_page_content_description">上一页</string>
 
-    <!-- 自定义滑动条 -->
+    <!-- Custom seekbar -->
     <string name="custom_seekbar_value">数值: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">默认</string>
     <string name="custom_seekbar_default_value_to_set">默认值: <xliff:g id="v">%s</xliff:g>\n长按以设置</string>
     <string name="custom_seekbar_default_value_is_set">默认值已设置</string>
     
-    <!-- 自动高亮度模式 -->
+    <!-- Auto HBM -->
     <string name="auto_hbm_title">自动高亮度模式 (HBM)</string>
     <string name="auto_hbm_main_switch_title">使用自动 HBM</string>
     <string name="tile_auto_hbm">自动 HBM</string>
@@ -84,7 +78,7 @@
     <string name="auto_hbm_disable_time_title">禁用时间</string>
     <string name="auto_hbm_disable_time_summary">当光线强度低于设定水平时，HBM 停用的持续时间 (秒)</string>
 
-    <!-- 游戏工具栏悬浮窗 -->
+    <!-- GameBar Overlay -->
     <string name="game_bar_title">游戏工具栏</string>
     <string name="game_bar_summary">启用系统悬浮窗 (FPS, 温度等)</string>
     <string name="overlay_permission_required">需要悬浮窗权限</string>
@@ -92,25 +86,6 @@
     <string name="overlay_permission_denied">悬浮窗权限被拒绝</string>
     <string name="game_bar_tile_label">游戏工具栏</string>
     <string name="game_bar_tile_description">切换游戏悬浮窗</string>
-
-    <!-- 旁路充电字符串 -->
-    <string name="charge_bypass_title">旁路充电</string>
-    <string name="charge_bypass_summary">启用直接充电，绕过电池</string>
-    <string name="charge_bypass_warning">警告：旁路充电可能导致设备温度升高或电池损坏。请谨慎使用。</string>
-    <string name="charge_bypass_unavailable">此设备不支持旁路充电</string>
-
-    <!-- 核心控制 -->
-    <string name="core_control_title">核心控制</string>
-    <string name="core_control_summary">手动启用或禁用单个 CPU 核心</string>
-    <string name="core_control_description">高级 CPU 控制。关闭核心可能节省电量或减轻热负载，但可能影响性能和稳定性。\n\n至少需要保持两个小核心始终在线。</string>
-    <string name="core_0">核心 0 (小核)</string>
-    <string name="core_1">核心 1 (小核)</string>
-    <string name="core_2">核心 2 (小核)</string>
-    <string name="core_3">核心 3 (小核)</string>
-    <string name="core_4">核心 4 (大核)</string>
-    <string name="core_5">核心 5 (大核)</string>
-    <string name="core_6">核心 6 (大核)</string>
-    <string name="core_7">核心 7 (大核)</string>
 
     <string name="game_bar_enable_title">启用 GameBar 悬浮窗</string>
     <string name="game_bar_category_overlay_features">悬浮窗功能</string>
@@ -185,17 +160,45 @@
     <string name="game_bar_per_app_config_title">配置应用</string>
     <string name="game_bar_per_app_config_summary">选择哪些应用自动启用 GameBar</string>
 
+    <!-- Dashboard group headers -->
+    <string name="parts_group_title">部件</string>
     <string name="others_group_title">其他</string>
 
+    <!-- Thermal profile descriptions -->
     <string name="thermal_default_desc">系统默认行为，不对每个应用进行散热调节。</string>
     <string name="thermal_benchmark_desc">最高性能，散热限制更宽松。设备可能会发热。</string>
     <string name="thermal_browser_desc">为网页浏览和阅读优化的均衡调节。</string>
     <string name="thermal_camera_desc">为拍照和录制视频进行了优化。</string>
     <string name="thermal_dialer_desc">语音通话的轻量调节，发热和功耗低。</string>
     <string name="thermal_gaming_desc">为游戏提供持续性能，允许更高的温度。</string>
+    <string name="thermal_navigation_desc">为地图和逐向导航提供稳定调校，即使屏幕长时间保持亮起。</string>
     <string name="thermal_streaming_desc">为长时间视频和音乐流媒体优化的均衡调节。</string>
+    <string name="thermal_video_desc">为本地视频播放提供高效调校，发热和耗电较低。</string>
     <string name="thermal_search_hint">搜索应用</string>
     <string name="thermal_search_hint_short">搜索\u2026</string>
     <string name="thermal_profile_footer">所选配置会在应用使用期间自动应用。</string>
+
+    <!-- Additional strings (not in main strings.xml) -->
+    <string name="refresh_title">应用刷新率</string>
+    <string name="refresh_summary">为特定应用设置最大刷新率</string>
+    <string name="refresh_default">默认</string>
+    <string name="refresh_standard">60 Hz</string>
+    <string name="refresh_high">90 Hz</string>
+    <string name="refresh_extreme">120 Hz</string>
+    <string name="charge_bypass_title">旁路充电</string>
+    <string name="charge_bypass_summary">启用直接充电，绕过电池</string>
+    <string name="charge_bypass_warning">警告：旁路充电可能导致设备温度升高或电池损坏。请谨慎使用。</string>
+    <string name="charge_bypass_unavailable">此设备不支持旁路充电</string>
+    <string name="core_control_title">核心控制</string>
+    <string name="core_control_summary">手动启用或禁用单个 CPU 核心</string>
+    <string name="core_control_description">高级 CPU 控制。关闭核心可能节省电量或减轻热负载，但可能影响性能和稳定性。\n\n至少需要保持两个小核心始终在线。</string>
+    <string name="core_0">核心 0 (小核)</string>
+    <string name="core_1">核心 1 (小核)</string>
+    <string name="core_2">核心 2 (小核)</string>
+    <string name="core_3">核心 3 (小核)</string>
+    <string name="core_4">核心 4 (大核)</string>
+    <string name="core_5">核心 5 (大核)</string>
+    <string name="core_6">核心 6 (大核)</string>
+    <string name="core_7">核心 7 (大核)</string>
 
 </resources>

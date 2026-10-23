@@ -34,7 +34,9 @@
     <string name="thermal_camera">Kamera</string>
     <string name="thermal_dialer">Zənglər</string>
     <string name="thermal_gaming">Oyun</string>
+    <string name="thermal_navigation">Naviqasiya</string>
     <string name="thermal_streaming">Yayım</string>
+    <string name="thermal_video">Video</string>
 
     <!-- Clear Speaker -->
    <string name="clear_speaker_title">Dinamiki təmizlə</string>
@@ -158,15 +160,20 @@
     <string name="game_bar_per_app_config_title">Tətbiqləri Konfiqurasiya Et</string>
     <string name="game_bar_per_app_config_summary">Hansı tətbiqlərin GameBar-ı avtomatik aktivləşdirəcəyini seçin</string>
 
+    <!-- Dashboard group headers -->
+    <string name="parts_group_title">Hissələr</string>
     <string name="others_group_title">Digərləri</string>
 
+    <!-- Thermal profile descriptions -->
     <string name="thermal_default_desc">Sistemin standart davranışı, hər tətbiq üçün istilik tənzimləməsi yoxdur.</string>
     <string name="thermal_benchmark_desc">Zəiflədilmiş istilik limitləri ilə maksimum performans. Cihaz qıza bilər.</string>
     <string name="thermal_browser_desc">Vebdə gəzmək və oxumaq üçün balanslaşdırılmış tənzimləmə.</string>
     <string name="thermal_camera_desc">Foto çəkmək və video yazmaq üçün tənzimlənib.</string>
     <string name="thermal_dialer_desc">Az istilik və enerji sərfi ilə səsli zənglər üçün yüngül tənzimləmə.</string>
     <string name="thermal_gaming_desc">Daha yüksək temperatura icazə verən, oyunlar üçün davamlı performans.</string>
+    <string name="thermal_navigation_desc">Xəritələr və addım-addım naviqasiya üçün sabit tənzimləmə, ekran uzun müddət açıq qalsa belə.</string>
     <string name="thermal_streaming_desc">Uzun video və musiqi yayımı sessiyaları üçün balanslaşdırılmış tənzimləmə.</string>
+    <string name="thermal_video_desc">Lokal video oxutma üçün səmərəli tənzimləmə, aşağı istilik və enerji istifadəsi ilə.</string>
     <string name="thermal_search_hint">Tətbiqləri axtar</string>
     <string name="thermal_search_hint_short">Axtar\u2026</string>
     <string name="thermal_profile_footer">Seçilmiş profil tətbiq istifadə olunarkən avtomatik tətbiq edilir.</string>

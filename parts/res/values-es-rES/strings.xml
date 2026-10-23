@@ -34,7 +34,9 @@
     <string name="thermal_camera">Cámara</string>
     <string name="thermal_dialer">Teléfono</string>
     <string name="thermal_gaming">Juegos</string>
+    <string name="thermal_navigation">Navegación</string>
     <string name="thermal_streaming">Transmisión</string>
+    <string name="thermal_video">Vídeo</string>
 
     <!-- Clear Speaker -->
    <string name="clear_speaker_title">Limpiar altavoz</string>
@@ -158,15 +160,20 @@
     <string name="game_bar_per_app_config_title">Configurar aplicaciones</string>
     <string name="game_bar_per_app_config_summary">Elegir qué aplicaciones activan GameBar automáticamente</string>
 
+    <!-- Dashboard group headers -->
+    <string name="parts_group_title">Componentes</string>
     <string name="others_group_title">Otros</string>
 
+    <!-- Thermal profile descriptions -->
     <string name="thermal_default_desc">Comportamiento predeterminado del sistema, sin ajuste térmico por aplicación.</string>
     <string name="thermal_benchmark_desc">Rendimiento máximo con límites térmicos relajados. El dispositivo puede calentarse.</string>
     <string name="thermal_browser_desc">Ajuste equilibrado para navegar por la web y leer.</string>
     <string name="thermal_camera_desc">Ajustado para hacer fotos y grabar vídeos.</string>
     <string name="thermal_dialer_desc">Ajuste ligero para llamadas de voz, con poco calor y consumo.</string>
     <string name="thermal_gaming_desc">Rendimiento sostenido para juegos, permitiendo temperaturas más altas.</string>
+    <string name="thermal_navigation_desc">Ajuste estable para mapas y navegación paso a paso, incluso con la pantalla encendida durante periodos prolongados.</string>
     <string name="thermal_streaming_desc">Ajuste equilibrado para sesiones largas de streaming de vídeo y música.</string>
+    <string name="thermal_video_desc">Ajuste eficiente para la reproducción de vídeo local, con poco calor y bajo consumo de energía.</string>
     <string name="thermal_search_hint">Buscar aplicaciones</string>
     <string name="thermal_search_hint_short">Buscar\u2026</string>
     <string name="thermal_profile_footer">El perfil seleccionado se aplica automáticamente mientras la aplicación está en uso.</string>

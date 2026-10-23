@@ -34,7 +34,9 @@
     <string name="thermal_camera">Kamera</string>
     <string name="thermal_dialer">Oppringing</string>
     <string name="thermal_gaming">Spel</string>
+    <string name="thermal_navigation">Navigasjon</string>
     <string name="thermal_streaming">Strøyming</string>
+    <string name="thermal_video">Video</string>
 
     <!-- Clear Speaker -->
    <string name="clear_speaker_title">Reingjer høgtalaren</string>
@@ -158,15 +160,20 @@
     <string name="game_bar_per_app_config_title">Konfigurer appar</string>
     <string name="game_bar_per_app_config_summary">Vel kva appar som aktiverer GameBar automatisk</string>
 
+    <!-- Dashboard group headers -->
+    <string name="parts_group_title">Delar</string>
     <string name="others_group_title">Andre</string>
 
+    <!-- Thermal profile descriptions -->
     <string name="thermal_default_desc">Standardåtferda til systemet, utan termisk justering per app.</string>
     <string name="thermal_benchmark_desc">Maksimal yting med avslappa termiske grenser. Eininga kan bli varm.</string>
     <string name="thermal_browser_desc">Balansert justering for nettsurfing og lesing.</string>
     <string name="thermal_camera_desc">Justert for å ta bilete og spele inn video.</string>
     <string name="thermal_dialer_desc">Lett justering for talesamtalar, med låg varme og straumbruk.</string>
     <string name="thermal_gaming_desc">Vedvarande yting for spel, med høgare temperaturar tillatne.</string>
+    <string name="thermal_navigation_desc">Stabil tilpassing for kart og trinn-for-trinn-navigasjon, òg når skjermen er på over lengre tid.</string>
     <string name="thermal_streaming_desc">Balansert justering for lange video- og musikkstraumingsøkter.</string>
+    <string name="thermal_video_desc">Effektiv tilpassing for lokal videoavspeling, med låg varme og lågt straumforbruk.</string>
     <string name="thermal_search_hint">Søk i appar</string>
     <string name="thermal_search_hint_short">Søk\u2026</string>
     <string name="thermal_profile_footer">Den valde profilen blir brukt automatisk medan appen er i bruk.</string>
