@@ -34,7 +34,9 @@
     <string name="thermal_camera">कैमरा</string>
     <string name="thermal_dialer">फ़ोन</string>
     <string name="thermal_gaming">गेमिंग</string>
+    <string name="thermal_navigation">नेविगेशन</string>
     <string name="thermal_streaming">स्ट्रीमिंग</string>
+    <string name="thermal_video">वीडियो</string>
 
     <!-- Clear Speaker -->
    <string name="clear_speaker_title">स्पीकर साफ़ करें</string>
@@ -56,7 +58,7 @@
     <string name="custom_seekbar_default_value">डिफ़ॉल्ट रूप से</string>
     <string name="custom_seekbar_default_value_to_set">डिफ़ॉल्ट मान: <xliff:g id="v">%s</xliff:g>\nसेट करने के लिए देर तक दबाएँ</string>
     <string name="custom_seekbar_default_value_is_set">डिफ़ॉल्ट मान सेट है</string>
-
+    
     <!-- Auto HBM -->
     <string name="auto_hbm_title">स्वचालित हाई ब्राइटनेस मोड (HBM)</string>
     <string name="auto_hbm_main_switch_title">स्वचालित HBM का उपयोग करें</string>
@@ -158,15 +160,20 @@
     <string name="game_bar_per_app_config_title">ऐप कॉन्फ़िगर करें</string>
     <string name="game_bar_per_app_config_summary">चुनें कि कौन से ऐप GameBar को स्वतः सक्षम करेंगे</string>
 
+    <!-- Dashboard group headers -->
+    <string name="parts_group_title">पार्ट्स</string>
     <string name="others_group_title">अन्य</string>
 
+    <!-- Thermal profile descriptions -->
     <string name="thermal_default_desc">सिस्टम का डिफ़ॉल्ट व्यवहार, प्रति-ऐप थर्मल ट्यूनिंग के बिना।</string>
     <string name="thermal_benchmark_desc">शिथिल थर्मल सीमाओं के साथ अधिकतम प्रदर्शन। डिवाइस गर्म हो सकता है।</string>
     <string name="thermal_browser_desc">वेब ब्राउज़िंग और पढ़ने के लिए संतुलित ट्यूनिंग।</string>
     <string name="thermal_camera_desc">फ़ोटो लेने और वीडियो रिकॉर्ड करने के लिए ट्यून किया गया।</string>
     <string name="thermal_dialer_desc">कम गर्मी और बिजली उपयोग के साथ, वॉइस कॉल के लिए हल्की ट्यूनिंग।</string>
     <string name="thermal_gaming_desc">उच्च तापमान की अनुमति के साथ, गेम के लिए निरंतर प्रदर्शन।</string>
+    <string name="thermal_navigation_desc">मैप और टर्न-बाय-टर्न नेविगेशन के लिए स्थिर ट्यूनिंग, स्क्रीन लंबे समय तक चालू रहने पर भी।</string>
     <string name="thermal_streaming_desc">लंबे वीडियो और संगीत स्ट्रीमिंग सत्रों के लिए संतुलित ट्यूनिंग।</string>
+    <string name="thermal_video_desc">लोकल वीडियो प्लेबैक के लिए कुशल ट्यूनिंग, कम गर्मी और कम बिजली खपत के साथ।</string>
     <string name="thermal_search_hint">ऐप खोजें</string>
     <string name="thermal_search_hint_short">खोजें\u2026</string>
     <string name="thermal_profile_footer">चुनी गई प्रोफ़ाइल ऐप के उपयोग के दौरान स्वचालित रूप से लागू होती है।</string>
