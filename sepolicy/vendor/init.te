@@ -3,9 +3,6 @@ allow vendor_init cgroup:file r_file_perms;
 set_prop(vendor_init, vendor_fp_prop)
 set_prop(vendor_init, vendor_qcc_prop)
 
-# KProfiles
-allow init sysfs_kprofiles:file { setattr };
-
 # For setting read_ahead_kb
 allow init vendor_sysfs_sd:file w_file_perms;
 
