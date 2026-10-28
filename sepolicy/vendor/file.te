@@ -24,3 +24,7 @@ type proc_walt, fs_type, proc_type;
 
 # Wifi
 type vendor_mac_vendor_data_file, data_file_type, file_type, mlstrustedobject;
+
+# Axion Performance
+type proc_vm, fs_type, proc_type;
+type proc_swappiness, fs_type, proc_type;
