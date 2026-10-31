@@ -9,4 +9,6 @@ on property:sys.boot_completed=1
     restart vendor.charging
 
 on charger
+    chown system system /sys/class/power_supply/battery/charge_control_limit
+    chmod 0664 /sys/class/power_supply/battery/charge_control_limit
     start vendor.charging

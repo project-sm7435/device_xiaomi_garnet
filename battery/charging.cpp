@@ -15,10 +15,14 @@ int main() {
         std::ifstream f_t(T_NODE);
         int t = 0;
         if (!(f_t >> t)) {
+            LOGI("temp read failed");
             std::this_thread::sleep_for(std::chrono::seconds(5));
             continue;
         }
         f_t.close();
+
+        // temp node may report whole degrees (36) or tenths (360)
+        if (t < 100) t *= 10;
 
         int idx = 0;
         if (t >= 440) idx = 16;
@@ -33,6 +37,8 @@ int main() {
                 f_l.close();
                 LOGI("%d.%dC | idx: %d", t/10, t%10, idx);
                 last_idx = idx;
+            } else {
+                LOGI("limit open failed");
             }
         }
         std::this_thread::sleep_for(std::chrono::seconds(5));
