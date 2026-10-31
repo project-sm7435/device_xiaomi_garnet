@@ -46,6 +46,9 @@
 # Charging
 /vendor/bin/charging u:object_r:charging_exec:s0
 
+# Audio
+/dev/miev    u:object_r:miev_device:s0
+
 # Displayfeature
 /dev/mi_display/disp_feature u:object_r:vendor_displayfeature_device:s0
 /sys/devices/virtual/mi_display/disp_feature/disp-DSI-+[0-1](/.*)? u:object_r:vendor_sysfs_displayfeature:s0
