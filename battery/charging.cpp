@@ -9,36 +9,82 @@
 #define T_NODE "/sys/class/power_supply/battery/temp"
 #define L_NODE "/sys/class/power_supply/battery/charge_control_limit"
 
+#define HYST 20  // step down only after cooling 2.0C below the tier threshold
+
+static bool read_int(const char* path, int& v) {
+    std::ifstream f(path);
+    return static_cast<bool>(f >> v);
+}
+
+static bool write_int(const char* path, int v) {
+    std::ofstream f(path);
+    if (!f.is_open()) return false;
+    f << v;
+    f.flush();
+    return f.good();
+}
+
+static int tier(int t) {
+    if (t >= 440) return 16;
+    if (t >= 410) return 10;
+    if (t >= 380) return 5;
+    return 0;
+}
+
+static int threshold(int idx) {
+    switch (idx) {
+        case 16: return 440;
+        case 10: return 410;
+        case 5:  return 380;
+        default: return 0;
+    }
+}
+
 int main() {
-    int last_idx = -1;
+    int want = 0;
+    int current = -1;
+    if (read_int(L_NODE, current) &&
+        (current == 0 || current == 5 ||
+         current == 10 || current == 16)) {
+        want = current;
+    }
+    int last_log = -1;
+    LOGI("daemon started");
     while (true) {
-        std::ifstream f_t(T_NODE);
         int t = 0;
-        if (!(f_t >> t)) {
+        if (!read_int(T_NODE, t)) {
             LOGI("temp read failed");
             std::this_thread::sleep_for(std::chrono::seconds(5));
             continue;
         }
-        f_t.close();
 
         // temp node may report whole degrees (36) or tenths (360)
         if (t < 100) t *= 10;
 
-        int idx = 0;
-        if (t >= 440) idx = 16;
-        else if (t >= 410) idx = 10;
-        else if (t >= 380) idx = 5;
-        else idx = 0;
+        // pick tier, with hysteresis when cooling down
+        int target = tier(t);
+        if (target < want && t >= threshold(want) - HYST) target = want;
+        want = target;
 
-        if (idx != last_idx) {
-            std::ofstream f_l(L_NODE);
-            if (f_l.is_open()) {
-                f_l << idx;
-                f_l.close();
-                LOGI("%d.%dC | idx: %d", t/10, t%10, idx);
-                last_idx = idx;
-            } else {
-                LOGI("limit open failed");
+        // re-read the node so outside changes are corrected too
+        int cur = -1;
+        read_int(L_NODE, cur);
+
+        if (last_log == -1) {
+            LOGI("%d.%dC | want %d | now %d", t / 10, t % 10, want, cur);
+            last_log = 0;
+        }
+
+        if (cur != want) {
+            bool ok = write_int(L_NODE, want);
+            int after = -1;
+            read_int(L_NODE, after);
+
+            int key = want * 10000 + (cur + 1) * 100 + (after + 1);
+            if (key != last_log) {
+                LOGI("%d.%dC | want %d | was %d | now %d%s", t / 10, t % 10,
+                     want, cur, after, ok ? "" : " | write failed");
+                last_log = key;
             }
         }
         std::this_thread::sleep_for(std::chrono::seconds(5));
