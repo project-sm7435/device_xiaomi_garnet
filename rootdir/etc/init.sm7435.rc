@@ -4,7 +4,7 @@ on property:persist.sys.device_provisioned=1 && property:sys.boot_completed=1
     write /dev/cpuctl/system-background/cpu.uclamp.max 50
     write /dev/cpuctl/dex2oat/cpu.uclamp.max 60
 
-# Set WALT early so first boot doesn't run on the performance governor
+# Set WALT early
 on boot
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor walt
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor walt
@@ -14,3 +14,20 @@ on boot
     write /sys/devices/system/cpu/cpu5/cpufreq/scaling_governor walt
     write /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor walt
     write /sys/devices/system/cpu/cpu7/cpufreq/scaling_governor walt
+
+# Grant Power HAL access to CPU scaling nodes
+    chown system system /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
+    chmod 0664 /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
+    chown system system /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq
+    chmod 0664 /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq
+
+    chown system system /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq
+    chmod 0664 /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq
+    chown system system /sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq
+    chmod 0664 /sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq
+
+# Grant Power HAL access to core_ctl
+    chown system system /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
+    chmod 0664 /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
+    chown system system /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
+    chmod 0664 /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
