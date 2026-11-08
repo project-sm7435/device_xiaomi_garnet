@@ -9,7 +9,7 @@
 #define T_NODE "/sys/class/power_supply/battery/temp"
 #define L_NODE "/sys/class/power_supply/battery/charge_control_limit"
 
-#define HYST 20  // step down only after cooling 2.0C below the tier threshold
+#define HYST 10  // step down only after cooling 1.0C below the tier threshold
 
 static bool read_int(const char* path, int& v) {
     std::ifstream f(path);
@@ -25,17 +25,17 @@ static bool write_int(const char* path, int v) {
 }
 
 static int tier(int t) {
-    if (t >= 430) return 16;
-    if (t >= 400) return 10;
-    if (t >= 380) return 5;
+    if (t >= 410) return 16;
+    if (t >= 390) return 10;
+    if (t >= 370) return 5;
     return 0;
 }
 
 static int threshold(int idx) {
     switch (idx) {
-        case 16: return 430;
-        case 10: return 400;
-        case 5:  return 380;
+        case 16: return 410;
+        case 10: return 390;
+        case 5:  return 370;
         default: return 0;
     }
 }
