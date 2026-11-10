@@ -1,5 +1,4 @@
 # Battery Saving
-persist.radio.add_power_save=1
 pm.sleep_mode=1
 ro.ril.disable.power.collapse=0
 ro.ril.fast.dormancy.rule=1
@@ -56,3 +55,27 @@ debug.hwui.use_triple_buffering=true
 
 #surface_flinger
 ro.surface_flinger.support_kernel_idle_timer=true
+
+# Log
+persist.log.tag.SurfaceFlinger=S
+persist.log.tag.Gralloc4=S
+persist.log.tag.PipelineWatcher=S
+persist.log.tag.SensorService=S
+persist.log.tag.vendor.qti.vibratorOL=S
+persist.log.tag.AdrenoVK-0=S
+persist.log.tag.SystemServer=S
+persist.log.tag.AppOps=S
+persist.log.tag.minksocket=S
+persist.log.tag.SensorManager=S
+persist.log.tag.WindowManager=S
+persist.log.tag.DeviceModeModule=S
+persist.log.tag.BackgroundInstallControlService=S
+persist.log.tag.wificond=S
+persist.log.tag.b/223498680=S
+persist.log.tag.TrafficStats=S
+persist.log.tag.ContrastColorUtil=S
+persist.log.tag.PAL=S
+persist.log.tag.AGM=S
+persist.log.tag.gsl=S
+persist.log.tag.Tracer=S
+persist.log.tag.HWUI=S
