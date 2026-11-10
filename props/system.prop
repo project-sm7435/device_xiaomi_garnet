@@ -79,3 +79,6 @@ persist.log.tag.AGM=S
 persist.log.tag.gsl=S
 persist.log.tag.Tracer=S
 persist.log.tag.HWUI=S
+
+# Media
+media.stagefright.thumbnail.prefer_hw_codecs=true
