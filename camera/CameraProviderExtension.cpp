@@ -6,14 +6,19 @@
 
 #include "CameraProviderExtension.h"
 
+#include <android-base/properties.h>
+
 #include <fstream>
+#include <string>
 
 #define TORCH_BRIGHTNESS "brightness"
 #define TORCH_MAX_BRIGHTNESS "max_brightness"
 #define TORCH_TRIGGER "trigger"
 #define TOGGLE_SWITCH "/sys/devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-05/c42d000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/leds/led:switch_2/brightness"
 #define TOGGLE_SWITCH_TRIGGER "/sys/devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-05/c42d000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/leds/led:switch_2/trigger"
-static std::string kTorchLedPath = "/sys/devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-05/c42d000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/leds/led:torch_0";
+
+static std::string kTorchLed0Path = "/sys/devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-05/c42d000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/leds/led:torch_0";
+static std::string kTorchLed1Path = "/sys/devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-05/c42d000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/leds/led:torch_1";
 
 /**
  * Write value to path and close file.
@@ -36,6 +41,27 @@ static T get(const std::string& path, const T& def) {
     return file.fail() ? def : result;
 }
 
+/**
+ * Redmi (200MP s5khp3) uses torch_1 only.
+ * Poco (64MP ov64b40) uses torch_0 + switch_2.
+ */
+static bool isRedmiTorch1Active() {
+    static int cached = -1;
+    if (cached != -1) {
+        return cached == 1;
+    }
+
+    std::string info =
+            android::base::GetProperty("persist.vendor.camera.mi.module.info", "");
+    if (info.empty()) {
+        // Property not ready yet: use Poco path, don't cache
+        return false;
+    }
+
+    cached = (info.find("back_main=s5khp3") != std::string::npos) ? 1 : 0;
+    return cached == 1;
+}
+
 bool supportsTorchStrengthControlExt() {
     return true;
 }
@@ -49,31 +75,29 @@ int32_t getTorchDefaultStrengthLevelExt() {
 }
 
 int32_t getTorchMaxStrengthLevelExt() {
-    // In our device, both LEDs has same maximum value
-    // so get from one.
-    auto node = kTorchLedPath + "/" + TORCH_MAX_BRIGHTNESS;
     return 500;
 }
 
 int32_t getTorchStrengthLevelExt() {
-    // We write same value in the both LEDs,
-    // so get from one.
-    auto node = kTorchLedPath + "/" + TORCH_BRIGHTNESS;
-    return get(node, 0);
+    const auto& path = isRedmiTorch1Active() ? kTorchLed1Path : kTorchLed0Path;
+    return get(path + "/" + TORCH_BRIGHTNESS, 0);
 }
 
 void setTorchStrengthLevelExt(int32_t torchStrength, bool enabled) {
+    if (isRedmiTorch1Active()) {
+        set(kTorchLed1Path + "/" + TORCH_BRIGHTNESS, enabled ? torchStrength : 0);
+        return;
+    }
+
     if (enabled) {
         set(TOGGLE_SWITCH, 0);
-        auto node = kTorchLedPath + "/" + TORCH_BRIGHTNESS;
-        set(node, torchStrength);
+        set(kTorchLed0Path + "/" + TORCH_BRIGHTNESS, torchStrength);
         set(TOGGLE_SWITCH, 255);
     } else {
         set(TOGGLE_SWITCH, 0);
-        auto node = kTorchLedPath + "/" + TORCH_BRIGHTNESS;
-        set(node, 0);
+        set(kTorchLed0Path + "/" + TORCH_BRIGHTNESS, 0);
         set(TOGGLE_SWITCH_TRIGGER, "switch2_trigger");
-        set(kTorchLedPath + "/" + TORCH_TRIGGER, "torch0_trigger");
+        set(kTorchLed0Path + "/" + TORCH_TRIGGER, "torch0_trigger");
     }
 }
 
