@@ -84,20 +84,18 @@ int32_t getTorchStrengthLevelExt() {
 }
 
 void setTorchStrengthLevelExt(int32_t torchStrength, bool enabled) {
-    if (isRedmiTorch1Active()) {
-        set(kTorchLed1Path + "/" + TORCH_BRIGHTNESS, enabled ? torchStrength : 0);
-        return;
-    }
+    const auto& path = isRedmiTorch1Active() ? kTorchLed1Path : kTorchLed0Path;
+    const auto& trigger = isRedmiTorch1Active() ? "torch1_trigger" : "torch0_trigger";
 
     if (enabled) {
         set(TOGGLE_SWITCH, 0);
-        set(kTorchLed0Path + "/" + TORCH_BRIGHTNESS, torchStrength);
+        set(path + "/" + TORCH_BRIGHTNESS, torchStrength);
         set(TOGGLE_SWITCH, 255);
     } else {
         set(TOGGLE_SWITCH, 0);
-        set(kTorchLed0Path + "/" + TORCH_BRIGHTNESS, 0);
+        set(path + "/" + TORCH_BRIGHTNESS, 0);
         set(TOGGLE_SWITCH_TRIGGER, "switch2_trigger");
-        set(kTorchLed0Path + "/" + TORCH_TRIGGER, "torch0_trigger");
+        set(path + "/" + TORCH_TRIGGER, trigger);
     }
 }
 
