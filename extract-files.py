@@ -18,6 +18,7 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
+    'device/xiaomi/garnet',
     'hardware/qcom-caf/sm8450-6.6',
     'hardware/qcom-caf/sm8450',
     'hardware/qcom-caf/wlan',
@@ -95,6 +96,9 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace(r'<MediaCodec name="c2\.dolby[\s\S]*?</MediaCodec>', ''),
     'vendor/etc/vintf/manifest/c2_manifest_vendor.xml': blob_fixup()
         .regex_replace('.+dolby.+\n', ''),
+    'vendor/lib64/hw/camera.qcom.so': blob_fixup()
+        .add_needed('libcamximageformatutils_shim.so')
+        .add_needed('libprocessgroup_shim.so'),
     (
         'vendor/lib64/libagm.so',
         'vendor/lib64/libmcs.so',
@@ -107,7 +111,6 @@ blob_fixups: blob_fixups_user_type = {
             'libaudioroute-v34.so'
         ),
     (
-        'vendor/lib64/hw/camera.qcom.so',
         'vendor/lib64/hw/com.qti.chi.override.so',
         'vendor/lib64/libcamxcommonutils.so',
         'vendor/lib64/libmialgoengine.so'
