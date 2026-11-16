@@ -89,7 +89,11 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace(r'<MediaCodec name="c2\.dolby[\s\S]*?</MediaCodec>', ''),
         'vendor/lib64/hw/camera.qcom.so': blob_fixup()
         .add_needed('libcamximageformatutils_shim.so')
-        .add_needed('libprocessgroup_shim.so'),
+        .add_needed('libprocessgroup_shim.so')
+        .binary_regex_replace(
+            b'_ZN4CamX16ImageFormatUtils9GetFormatERNS_17GrallocPropertiesERNS_6FormatE',
+            b'_ZN4CamX16ImageFormatUtils9GetXiaomiERNS_17GrallocPropertiesERNS_6FormatE',
+        ),
     (
         'vendor/lib64/libagm.so',
         'vendor/lib64/libmcs.so',
