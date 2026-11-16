@@ -70,8 +70,8 @@ blob_fixups: blob_fixups_user_type = {
             'libgrpc++_unsecure.so',
             'libgrpc++_unsecure_prebuilt.so'
         ),
-    'vendor/bin/qguard': blob_fixup()
-        .add_needed('libbase_shim.so'),
+    'system_ext/framework/mirilhook.jar': blob_fixup()
+        .apktool_patch('blob-patches/mirilhook.patch', '-r'),
     (
         'vendor/bin/hw/vendor.qti.camera.provider@2.7-service_64',
         'vendor/lib64/camx.device@3.4-ext-impl.so',
