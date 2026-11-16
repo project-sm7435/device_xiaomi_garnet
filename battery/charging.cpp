@@ -25,7 +25,7 @@ static bool write_int(const char* path, int v) {
 }
 
 static int tier(int t) {
-    if (t >= 410) return 16;
+    if (t >= 410) return 15;
     if (t >= 390) return 10;
     if (t >= 370) return 5;
     return 0;
@@ -33,7 +33,7 @@ static int tier(int t) {
 
 static int threshold(int idx) {
     switch (idx) {
-        case 16: return 410;
+        case 15: return 410;
         case 10: return 390;
         case 5:  return 370;
         default: return 0;
@@ -45,7 +45,7 @@ int main() {
     int current = -1;
     if (read_int(L_NODE, current) &&
         (current == 0 || current == 5 ||
-         current == 10 || current == 16)) {
+         current == 10 || current == 15)) {
         want = current;
     }
     int last_log = -1;

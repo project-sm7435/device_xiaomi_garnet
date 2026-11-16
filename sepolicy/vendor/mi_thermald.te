@@ -17,7 +17,7 @@ allow mi_thermald thermal_data_file:file { create getattr open read rename setat
 allow mi_thermald vendor_data_file:dir { add_name read remove_name watch write };
 allow mi_thermald vendor_data_file:file { create getattr open read rename setattr unlink write };
 allow mi_thermald vendor_sysfs_battery_supply:dir r_dir_perms;
-allow mi_thermald vendor_sysfs_battery_supply:file rw_file_perms;
+allow mi_thermald vendor_sysfs_battery_supply:file r_file_perms;
 allow mi_thermald vendor_sysfs_battery_supply:lnk_file r_file_perms;
 allow mi_thermald vendor_sysfs_graphics:dir r_dir_perms;
 allow mi_thermald vendor_sysfs_graphics:file rw_file_perms;
