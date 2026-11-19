@@ -227,11 +227,8 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
-$(call soong_config_set,rmnetctl,old_rmnet_data,true)
 
 # Sepolicy
-include device/lineage/sepolicy/libion/sepolicy.mk
-# Must stay above SEPolicy.mk, which picks the sm8750 policy the 6.6 HALs need
 TARGET_KERNEL_VERSION := 6.6
 include device/lineage/sepolicy/libperfmgr/sepolicy.mk
 include device/qcom/sepolicy_vndr/SEPolicy.mk
